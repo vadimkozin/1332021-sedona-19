@@ -24,8 +24,12 @@
 
     <main class="page-main">
       <h1 class="visually-hidden">Фото и видео достопримечательностей Седоны</h1>
-      <section class="welcome-photo">
-        <h2 class="visually-hidden">Великолепный вид гор Седоны</h2>
+
+      <section class="promo">
+        <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
+        <div class="promo__picture brand-small">
+          <img class="promo__image" src="https://via.placeholder.com/229x39" width="229" height="39" alt="Welcome to the gardeous Sedona">
+        </div>
       </section>
 
       <section class="photos">
@@ -36,35 +40,69 @@
         <ul class="photos__list photo">
 
           <li class="photo__item">
-            <img class="photo__image" src="https://via.placeholder.com/280x280" width="280" height="280" alt="Фотография 1">
+            <div class="photo__picture">
+              <img class="photo__image" src="https://via.placeholder.com/280x280" width="280" height="280" alt="Фотография 1">
+            </div>
             <p class="photo__title">Неродные просторы</p>
             <p class="photo__author">Автор фото: Борис</p>
             <p class="photo__evaluation"><span class="visually-hidden">Оценка фотографии:</span>1350</p>
           </li>
 
           <li class="photo__item">
-            <img class="photo__image" src="https://via.placeholder.com/280x280" width="280" height="280" alt="Фотография 1">
+            <div class="photo__picture">
+              <img class="photo__image" src="https://via.placeholder.com/280x280" width="280" height="280" alt="Фотография 2">
+            </div>
             <p class="photo__title">Местная растительность</p>
             <p class="photo__author">Автор фото: Сергей</p>
             <p class="photo__evaluation"><span class="visually-hidden">Оценка фотографии:</span>143</p>
           </li>
 
           <li class="photo__item">
-            <img class="photo__image" src="https://via.placeholder.com/280x280" width="280" height="280" alt="Фотография 1">
+            <div class="photo__picture">
+              <img class="photo__image" src="https://via.placeholder.com/280x280" width="280" height="280" alt="Фотография 3">
+            </div>
             <p class="photo__title">Дорога на север</p>
             <p class="photo__author">Автор фото: Петр</p>
             <p class="photo__evaluation"><span class="visually-hidden">Оценка фотографии:</span>96</p>
           </li>
 
           <li class="photo__item">
-            <img class="photo__image" src="https://via.placeholder.com/280x280" width="280" height="280" alt="Фотография 1">
+            <div class="photo__picture">
+              <img class="photo__image" src="https://via.placeholder.com/280x280" width="280" height="280" alt="Фотография 4">
+            </div>
             <p class="photo__title">Мост дьявола</p>
             <p class="photo__author">Автор фото: Антон</p>
             <p class="photo__evaluation"><span class="visually-hidden">Оценка фотографии:</span>254</p>
           </li>
-
         </ul>
       </section>
+
+      <section class="video">
+        <h2 class="visually-hidden">Видио, показывающее достопримечательности Седоны</h2>
+        <strong class="video__title">Все еще сомневаетесь?</strong>
+        <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
+        </p>
+        <video class="video__video"
+	        src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
+          width="321"
+          height="201"
+          controls
+          poster="https://via.placeholder.com/321x201"
+          preload="none">
+        </video>
+        <nav class="video__controls controls">
+          <div class="controls__timeline timeline">
+            <div class="timeline__bar">
+              <div class="timeline__progress"></div>
+            </div>
+            <button class="timeline__button" type="button"><span class="visually-hidden">Ползунок выбора начала просмотра</span></button>
+          </div>
+          <button class="controls__rewind"><span class="visually-hidden">Перемотать назад</span></button>
+          <button class="controls__cc"><span class="visually-hidden">Что-то сделать</span></button>
+          <button class="controls__fullscreen"><span class="visually-hidden">На полный экран</span></button>
+        </nav>
+      </section>
+
     </main>
 
     <footer class="page-footer">
