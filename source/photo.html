@@ -78,7 +78,8 @@
       </section>
 
       <section class="video">
-        <h2 class="video__title">Все еще сомневаетесь?</h2>
+        <h2 class="visually-hidden">Видио, показывающее достопримечательности Седоны</h2>
+        <strong class="video__title">Все еще сомневаетесь?</strong>
         <p class="video__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!
         </p>
         <video class="video__video"
@@ -89,11 +90,17 @@
           poster="https://via.placeholder.com/321x201"
           preload="none">
         </video>
-        <div class="video__controls control">
-          <button class="control__rewind"><span class="visually-hidden">Перемотать назад</span></button>
-          <button class="control__cc"><span class="visually-hidden">Что-то сделать</span></button>
-          <button class="control__fullscreen"><span class="visually-hidden">На полный экран</span></button>
-        </div>
+        <nav class="video__controls controls">
+          <div class="controls__timeline timeline">
+            <div class="timeline__bar">
+              <div class="timeline__progress"></div>
+            </div>
+            <button class="timeline__button" type="button"><span class="visually-hidden">Ползунок выбора начала просмотра</span></button>
+          </div>
+          <button class="controls__rewind"><span class="visually-hidden">Перемотать назад</span></button>
+          <button class="controls__cc"><span class="visually-hidden">Что-то сделать</span></button>
+          <button class="controls__fullscreen"><span class="visually-hidden">На полный экран</span></button>
+        </nav>
       </section>
 
     </main>
