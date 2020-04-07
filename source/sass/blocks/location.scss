@@ -1,0 +1,31 @@
+.location {
+  background-color: $bg-color-location;
+}
+
+.location__item {
+  outline: 1px dotted blue; /*tmp*/
+}
+
+.location__title {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.location__number,
+.location__text {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: $color-grey;
+}
+
+@media (min-width: $tablet-width) {
+  .location {
+    display: flex;
+    padding-left: 0;
+  }
+
+  .location__item {
+    width: calc(100% / 3);
+  }
+}

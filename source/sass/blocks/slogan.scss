@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+//.slogan {}
+
+.slogan__content {
+  padding: 43px 32px 10px;
+
+  text-align: center;
+  line-height: 26px;
+
+  outline: 1px solid red;
+}
+
+.slogan__title {
+  display: block;
+
+  font-size: 18px;
+
+  outline: 1px solid blue;
+}
+
+.slogan__five-reasons {
+  font-weight: 400;
+  font-size: 14px;
+  outline: 1px solid magenta;
+}

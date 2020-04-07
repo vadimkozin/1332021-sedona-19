@@ -1,0 +1,72 @@
+.invitation {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.invitation__content {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.invitation__question {
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.invitation__text {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: $color-grey;
+
+  & br {
+    display: none;
+  }
+}
+
+.invitation__break {
+  display: none;
+}
+
+.invitation__button {
+  display: inline-block;
+  vertical-align: top;
+  margin-top: 15px;
+  padding: 17px 47px;
+
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  color: $primary-text-color;
+  background-color: $primary-color;
+}
+
+@media (min-width: $tablet-width) {
+  .invitation__content {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+
+  .invitation__question {
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  .invitation__text {
+    & br {
+      display: inline;
+    }
+  }
+
+  .invitation__button {
+    margin-top: 15px;
+    padding: 17px 136px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .invitation__content {
+    padding-left: 380px;
+    padding-right: 380px;
+  }
+}

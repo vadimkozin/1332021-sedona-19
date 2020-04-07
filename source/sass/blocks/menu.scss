@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+.menu {
+  min-height: 56px;
+  margin: 0 auto;
+
+  font-size: 18px;
+  line-height: 40px;
+  text-align: center;
+
+  background-color: $primary-color;
+}
+
+.menu__item {
+  padding-top: 10px;
+  padding-bottom: 5px;
+  box-shadow: 0 1px 0 0 rgba(1, 1, 1, 0.2),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.2);
+
+  & a {
+    color: $primary-text-color;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .menu {
+    max-width: $tablet-width;
+
+    font-size: 14px;
+    line-height: 26px;
+
+    background-color: $bg-main-color;
+  }
+
+  .menu__item {
+    & a {
+      color: $secondary-text-color;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .menu {
+    max-width: $desktop-width;
+  }
+}

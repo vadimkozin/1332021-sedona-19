@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.social {
+  margin-bottom: 30px;
+}
+
+.social__list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.social__item {
+  & a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 46px;
+    height: 48px;
+    margin-right: 6px;
+
+    background-color: $primary-color;
+  }
+
+  & path {
+    fill: $primary-text-color;
+  }
+}

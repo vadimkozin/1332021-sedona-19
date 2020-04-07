@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+.page-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  width: 320px;
+  margin: 0 auto;
+
+  outline: 1px solid red;
+}
+
+.page-header__logo {
+  position: relative;
+  order: 2;
+
+  display: block;
+  height: 56px;
+
+  outline: 1px dotted red;
+}
+
+.page-header__logo::after {
+  position: absolute;
+  content: "";
+  top: 16px;
+  right: 16px;
+
+  display: block;
+  width: 23px;
+  height: 21px;
+  background-image: url("../../img/icon-menu.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: 23px 21px;
+}
+
+.page-header__logo-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    width: auto;
+  }
+
+  .page-header__logo {
+    order: 0;
+    height: 0;
+  }
+
+  .page-header__logo::after {
+    background-image: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__logo-image {
+    display: block;
+    background-image: url("../../img/logo-sedona-tablet.svg");
+    background-repeat: no-repeat;
+    background-size: 102px 83px;
+    width: 0;
+    height: 83px;
+    padding-left: 102px;
+
+    z-index: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__logo-image {
+    display: block;
+    background-image: url("../../img/logo-sedona-desktop.svg");
+    background-repeat: no-repeat;
+    background-size: 188px 96px;
+    width: 0; // обнуляем ширину
+    height: 96px; // высота нового изображения
+    padding-left: 188px; // размер отступа равен ширине нового изображения
+  }
+}

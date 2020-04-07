@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+.main-nav {
+  position: relative;
+  width: 320px;
+  margin: 0 auto;
+}
+
+.main-nav__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  content: "";
+
+  display: block;
+
+  width: 23px;
+  height: 22px;
+
+  border: none;
+  background-image: url("../../img/icon-cross.svg");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  object-fit: contain;
+  background-size: 23px 22px;
+}
+
+@media (min-width: $tablet-width) {
+  .main-nav {
+    width: auto;
+    min-height: 56px;
+    margin: 0;
+  }
+
+  .main-nav__list {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .main-nav__toggle {
+    background-image: none;
+  }
+}
