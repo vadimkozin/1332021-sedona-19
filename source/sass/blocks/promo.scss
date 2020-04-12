@@ -14,6 +14,16 @@
     320px 26px,
     cover;  //768px 389px
   background-repeat: no-repeat;
+
+  &--small {
+    height: 155px;
+    background-position:
+      bottom 0 left 0,
+      top -235px center;
+    background-size:
+      320px 26px,
+      768px 389px;
+  }
 }
 
 .promo__picture {
@@ -21,6 +31,12 @@
   height: 214px;
   margin: 0 auto;
   padding-top: 90px;
+
+  &--small {
+    width: 229px;
+    height: 39px;
+    padding-top: 50px;
+  }
 }
 
 @media (min-width: $tablet-width) {

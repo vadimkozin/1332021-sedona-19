@@ -1,0 +1,22 @@
+.form {
+  & legend {
+    padding-top: 25px;
+    text-align: center;
+  }
+
+  & fieldset {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 25px;
+    border: none;
+    //border-bottom: 1px solid $divider-color;
+  }
+}
+
+.form__submit.button {
+  margin: 0 auto;
+  margin-top: 20px;
+
+  @include button($pt:16px, $ph:47px);
+}

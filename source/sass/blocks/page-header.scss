@@ -8,7 +8,7 @@
   width: 320px;
   margin: 0 auto;
 
-  outline: 1px solid red;
+  @include box-shadow-left-right();
 }
 
 .page-header__logo {
@@ -17,23 +17,10 @@
 
   display: block;
   height: 56px;
-
-  outline: 1px dotted red;
 }
 
 .page-header__logo::after {
-  position: absolute;
-  content: "";
-  top: 16px;
-  right: 16px;
-
-  display: block;
-  width: 23px;
-  height: 21px;
-  background-image: url("../../img/icon-menu.svg");
-  background-repeat: no-repeat;
-  background-color: transparent;
-  background-size: 23px 21px;
+  @include insert-image($t:16px, $r:16px, $w:23px, $h:21px, $bi:url("../../img/icon-menu.svg"));
 }
 
 .page-header__logo-image {
@@ -60,26 +47,13 @@
 
 @media (min-width: $tablet-width) {
   .page-header__logo-image {
-    display: block;
-    background-image: url("../../img/logo-sedona-tablet.svg");
-    background-repeat: no-repeat;
-    background-size: 102px 83px;
-    width: 0;
-    height: 83px;
-    padding-left: 102px;
-
+    @include replace-image($bi:url("../../img/logo-sedona-tablet.svg"), $w:102px, $h:83px);
     z-index: 1;
   }
 }
 
 @media (min-width: $desktop-width) {
   .page-header__logo-image {
-    display: block;
-    background-image: url("../../img/logo-sedona-desktop.svg");
-    background-repeat: no-repeat;
-    background-size: 188px 96px;
-    width: 0; // обнуляем ширину
-    height: 96px; // высота нового изображения
-    padding-left: 188px; // размер отступа равен ширине нового изображения
+    @include replace-image($bi:url("../../img/logo-sedona-desktop.svg"), $w:188px, $h:96px);
   }
 }

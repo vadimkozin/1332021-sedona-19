@@ -1,0 +1,26 @@
+// .emotions {}
+// .emotions__title {}
+// .emotions__text {}
+
+.emotions {
+  width: 100%;
+}
+
+.emotions__text {
+  width: 100%;
+  height: 160px;
+  padding-left: 21px;
+  padding-top: 22px;
+  padding-right: 33px;
+  resize: none;
+
+  @include set-font($fz:18px, $lh:26px);
+  text-transform: none;
+
+  &::placeholder {
+    color: $secondary-text-color;
+  }
+
+  background-color: $elem-outer-fresh-color;
+  border: none;
+}

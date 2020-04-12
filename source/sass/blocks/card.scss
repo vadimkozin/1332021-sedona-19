@@ -1,0 +1,50 @@
+.card {
+  margin: 0 auto;
+  width: 320px;
+  padding-top: 40px;
+  padding-bottom: 35px;
+
+  background-color: $bg-main-color;
+  box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
+  outline: 1px dotted $white-snow-color;
+
+  &--ok {
+    padding-bottom: 0;
+  }
+}
+
+.card__wrap-text {
+  padding-left: 56px;
+  padding-right: 56px;
+}
+
+.card__title {
+  @include set-font($fz:18px, $lh:26px);
+  text-align: center;
+}
+
+.card__text {
+  @include set-font($fz:14px, $lh:24px, $fw:normal);
+  text-align: center;
+  color: $color-grey;
+}
+
+.card__buttons {
+  &--bad {
+    margin-top: 25px;
+  }
+
+  &--ok {
+    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    background-color: $bg-color;
+  }
+}
+
+.card__button {
+  margin: 0 auto;
+
+  @include button($pt:16px, $ph:76px, $fz:18px, $lh:26px);
+}

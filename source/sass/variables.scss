@@ -1,11 +1,21 @@
 @charset "UTF-8";
 $font-stack: "PT Sans", "Arial", sans-serif;
-$bg-main-color: #ffffff;
-$bg-color: #f2f2f2;
 $primary-color: #81b3d2;
 $primary-text-color: #ffffff;
 $secondary-text-color: #000000;
+$bg-main-color: #ffffff;
+$bg-color: #f2f2f2;
 $color-grey: #333333;
 $bg-color-location: #eeeeee;
+$divider-color: #d6d6d6;
+$white-snow-color: $bg-color;
 $tablet-width: 768px;
 $desktop-width: 1200px;
+// элементы input на форме
+$placeholder-color: $secondary-text-color;
+$elem-outer-fresh-color: $bg-color;
+$elem-outer-hover-color: #e5e5e5;
+$elem-outer-down-color: #d5d5d5;
+$elem-inner-fresh-color: hsl(0, 0%, 20%); // #333333
+$elem-inner-hover-color: hsl(0, 0%, 20%);
+$elem-inner-down-color: hsla(0, 0%, 20%, 0.3);

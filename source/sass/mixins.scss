@@ -1,0 +1,69 @@
+// @include set-font($fz:18px, $lh:26px, $fw:normal);
+@mixin set-font($fz, $lh:inherit, $ff:"PT Sans", $fw:700) {
+  font-size: $fz;
+  line-height: $lh;
+  font-family: $ff;
+  font-weight: $fw;
+}
+
+// @include insert-image($t:16px, $r:16px, $w:23px, $h:22px, $bi:none);
+@mixin insert-image($t:0, $r:0, $w:20px, $h:20px, $bi:none) {
+  position: absolute;
+  content: "";
+  top: $t;
+  right: $r;
+
+  display: block;
+
+  width: $w;
+  height: $h;
+
+  border: none;
+  background-image: $bi;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-size: $w $h;
+  object-fit: contain;
+}
+
+// @include replace-image($bi:url("../../img/main-city-tablet@1x.jpg"), $w:512px, $h:256px);
+@mixin replace-image($bi, $w, $h) {
+  background-image: $bi;  // url("../../img/main-city-tablet@1x.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: $w $h;   // 512px 256px
+  width: 0; // обнуляем ширину
+  height: $h; // 256px высота нового изображения
+  padding-left: $w; // 512px размер отступа равен ширине нового изображения
+}
+
+// @include button($pt:17px, $ph:47px);
+@mixin button($pt, $ph, $pb:$pt, $fz:21px, $lh:26px, $ff:inherit, $tt:uppercase, $cr:$primary-text-color, $bc:$primary-color) {
+
+  display: block;
+  padding: $pt $ph $pb; // top horizon bottom;
+
+  font-family: $ff;
+  font-size: $fz;
+  line-height: $lh;
+  text-align: center;
+  text-transform: $tt;
+  color: $cr;
+
+  background-color: $bc;
+  border: none;
+}
+
+@mixin box-shadow-left-right() {
+  box-shadow:
+    5px 0 5px 0 rgba(0, 1, 1, 0.15),
+    -5px 0 5px 0 rgba(0, 1, 1, 0.15);
+}
+
+@mixin min-max($min-width, $max-width, $padding) {
+  min-width: $min-width;
+  max-width: $max-width;
+  padding: 0 $padding;
+  box-sizing: border-box;
+  margin: 0 auto;
+}

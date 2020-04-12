@@ -29,16 +29,9 @@
 }
 
 .invitation__button {
-  display: inline-block;
-  vertical-align: top;
   margin-top: 15px;
-  padding: 17px 47px;
 
-  font-size: 21px;
-  line-height: 26px;
-  text-align: center;
-  color: $primary-text-color;
-  background-color: $primary-color;
+  @include button($pt:17px, $ph:40px);
 }
 
 @media (min-width: $tablet-width) {
