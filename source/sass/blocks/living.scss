@@ -1,0 +1,44 @@
+// .living { padding-left: 22px; }
+
+.living__item {
+  min-height: 120px;
+  outline: 1px dotted blue; /*tmp*/
+}
+
+.living__photo {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.living__content {
+  display: inline-block;
+  vertical-align: top;
+
+  max-width: 210px;
+  margin-top: -10px;
+  padding-left: 10px;
+}
+
+.living__title {
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.living__text {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: normal;
+  color: $color-grey;
+}
+
+@media (min-width: $tablet-width) {
+  .living {
+    display: flex;
+    padding-left: 0;
+  }
+
+  .living__content {
+    max-width: none;
+  }
+}

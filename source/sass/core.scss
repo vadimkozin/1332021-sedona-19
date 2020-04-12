@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  font-family: $font-stack;
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 21px;
+  color: #000000;
+  text-transform: uppercase;
+
+  background-color: $bg-color;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+}

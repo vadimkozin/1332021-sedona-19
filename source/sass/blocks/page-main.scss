@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.page-main {
+  margin: 0 auto;
+  width: 320px;
+
+  background-color: $bg-main-color;
+
+  @include box-shadow-left-right();
+}
+
+@media (min-width: $tablet-width) {
+  .page-main {
+    width: $tablet-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-main {
+    width: $desktop-width;
+  }
+}

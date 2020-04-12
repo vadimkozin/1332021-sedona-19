@@ -1,0 +1,5 @@
+.legend {
+  margin-bottom: 25px;
+
+  @include set-font($fz:18px, $lh:26px);
+}

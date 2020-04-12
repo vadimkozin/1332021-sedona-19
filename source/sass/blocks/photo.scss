@@ -1,0 +1,77 @@
+//.photo {}
+
+.photo__item {
+  padding-top: 23px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #d6d6d6;
+}
+
+//.photo__picture { }
+
+.photo__image {
+  display: block;
+  margin: 0 auto;
+}
+
+.photo__text-wrap {
+  padding-left: 20px;
+  text-align: left;
+}
+
+
+.photo__title {
+  margin-bottom: 0;
+
+  @include set-font($fz:14px, $lh:24px);
+}
+
+.photo__author {
+  margin-top: 0;
+  margin-bottom: 5px;
+
+  @include set-font($fz:14px, $lh:24px, $fw:normal);
+  text-transform: none;
+  color: $color-grey;
+}
+
+.photo__evaluation {
+  &-like {
+    display: inline-block;
+    vertical-align: baseline;
+    margin: 0;
+    width: 23px;
+    height: 21px;
+
+    background-image: url("../../img/icon-like.svg");
+    background-repeat: no-repeat;
+    background-size: 23px 21px;
+    background-position: 0 0;
+
+    opacity: 0.3;
+  }
+
+  &-value {
+    display: inline-block;
+    vertical-align: baseline;
+    margin: 0;
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .photo__item:nth-child(1) > .photo__picture {
+    display: block;
+    margin: 0 auto;
+
+    @include replace-image($bi: url("../../img/photo-sunset-tablet@1x.jpg"), $w:648px, $h:400px);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .photo__item:nth-child(1) > .photo__picture {
+    display: block;
+    margin: 0 auto;
+
+    @include replace-image($bi: url("../../img/photo-sunset-desktop@1x.jpg"), $w:1200px, $h:400px);
+  }
+}

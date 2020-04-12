@@ -1,0 +1,31 @@
+.photos {
+  outline: 1px dotted green; /*tmp*/
+}
+
+.photos__wrap {
+  padding: 20px 24px 16px;
+  // outline: 1px dotted red; /*tmp*/
+}
+
+.photos__list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.photos__title {
+  margin-bottom: 20px;
+  font-size: 18px;
+  line-height: 26px;
+  text-align: center;
+}
+
+.photos__text {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  text-align: center;
+  color: $color-grey;
+}
+
+//.photos__list {}

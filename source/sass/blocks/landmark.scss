@@ -1,0 +1,95 @@
+.landmark {
+  display: flex;
+  flex-direction: column;
+
+  color: $primary-text-color;
+  background-color: $primary-color;
+
+  &--city {
+    background-image: url("../../img/bg-triangle.svg");
+    background-position: 0 0;
+    background-size: 320px 37px;
+    background-repeat: no-repeat;
+  }
+}
+
+.landmark__content {
+  &--city {
+    padding: 61px 28px 30px;
+  }
+
+  &--bridge {
+    padding: 35px 30px 30px;
+  }
+
+  text-align: center;
+}
+
+.landmark__title {
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.landmark__number,
+.landmark__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.landmark__picture {
+  line-height: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .landmark {
+    flex-direction: row;
+
+    background-image: none;
+  }
+
+  .landmark__content {
+    width: 256px;
+  }
+
+  .landmark__picture {
+    &--city {
+      background-image: url("../../img/main-city-tablet@1x.jpg");
+    }
+
+    &--bridge {
+      background-image: url("../../img/main-bridge-tablet@1x.jpg");
+      order: -1;
+    }
+
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 512px 256px;
+    width: 0; // обнуляем ширину
+    height: 256px; // высота нового изображения
+    padding-left: 512px; // размер отступа равен ширине нового изображения
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .landmark__content {
+    width: 400px;
+  }
+
+  .landmark__picture {
+    &--city {
+      background-image: url("../../img/main-city-desktop@1x.jpg");
+    }
+
+    &--bridge {
+      background-image: url("../../img/main-bridge-desktop@1x.jpg");
+    }
+
+    background-position: top -73px left 0;
+    background-repeat: no-repeat;
+    background-size: cover; // 800px 256px
+    width: 0; // обнуляем ширину
+    height: 256px; // высота нового изображения
+    padding-left: 800px; // размер отступа равен ширине нового изображения
+  }
+}

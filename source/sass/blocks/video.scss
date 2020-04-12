@@ -1,0 +1,47 @@
+.video {
+  background-color: rgb(240, 235, 235); /*tmp*/
+}
+
+.video__words-wrap {
+  padding: 20px 42px;
+}
+
+.video__title {
+  display: block;
+  margin: 0 auto;
+
+  @include set-font($fz:18px, $lh:26px);
+  text-align: center;
+}
+
+.video__text {
+  @include set-font($fz:14px, $lh:24px, $fw:normal);
+  color: $color-grey;
+  text-align: center;
+}
+
+.video__video-wrap {
+  text-align: center;
+}
+
+//.video__video {}
+
+//.video__controls {}
+
+@media (min-width: $tablet-width) {
+  .video__video {
+    outline: 1px dotted grey;
+    width: 648px;
+    height: 449px;
+    //background-image: url("../../img/video-tablet@1x.jpg");
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .video__video {
+    outline: 2px dotted yellowgreen;
+    width: 800px;
+    height: 500px;
+    //background-image: url("../../img/video-desktop@1x.jpg");
+  }
+}

@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+.page-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  width: 320px;
+  margin: 0 auto;
+
+  @include box-shadow-left-right();
+}
+
+.page-header__logo {
+  position: relative;
+  order: 2;
+
+  display: block;
+  height: 56px;
+}
+
+.page-header__logo::after {
+  @include insert-image($t:16px, $r:16px, $w:23px, $h:21px, $bi:url("../../img/icon-menu.svg"));
+}
+
+.page-header__logo-image {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@media (min-width: $tablet-width) {
+  .page-header {
+    width: auto;
+  }
+
+  .page-header__logo {
+    order: 0;
+    height: 0;
+  }
+
+  .page-header__logo::after {
+    background-image: none;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .page-header__logo-image {
+    @include replace-image($bi:url("../../img/logo-sedona-tablet.svg"), $w:102px, $h:83px);
+    z-index: 1;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .page-header__logo-image {
+    @include replace-image($bi:url("../../img/logo-sedona-desktop.svg"), $w:188px, $h:96px);
+  }
+}
