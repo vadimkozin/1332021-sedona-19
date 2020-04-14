@@ -1,0 +1,184 @@
+.panel {
+  width: 280px;
+}
+
+.panel__opacity {
+  width: 100%;
+  height: $mobile-video-panel-height;
+  margin-top: -$mobile-video-panel-height;
+
+  background-color: #000000;
+  opacity: 0.6;
+}
+
+.panel__bar {
+  position: relative;
+
+  width: 100%;
+  height: 45px;
+  margin-top: -45px;
+}
+
+.panel__space {
+  width: 100%;
+  height: 66px;
+
+  background-color: $white-snow-color;
+}
+
+.panel__timeline {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 235px;
+  height: 3px;
+
+  opacity: 0.2;
+  background-color: #ffffff;
+}
+
+.panel__slider {
+  position: absolute;
+  top: 50%;
+  left: 21%;
+  transform: translateY(-50%);
+
+  padding: 0;
+  width: 10px;
+  height: 10px;
+
+  border: none;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.panel__buttons {
+  transform: translateY(56px);
+  display: flex;
+  align-items: center;
+
+  height: 100%;
+}
+
+.panel__btn {
+  padding: 0;
+  height: 20px;
+
+  border: none;
+  background-color: transparent;
+
+  &--replay {
+    width: 16px;
+    margin-left: 25px;
+    margin-right: auto;
+  }
+
+  &--cc {
+    width: 32px;
+    margin-right: 31px;
+  }
+
+  &--fullscreen {
+    width: 20px;
+    margin-right: 23px;
+  }
+
+  & path,
+  & polygon {
+    fill: $mobile-btn-fresh-color;
+  }
+
+  &:hover {
+    & path,
+    & polygon {
+      fill: $mobile-btn-hover-color;
+    }
+  }
+
+  &:active {
+    & path,
+    & polygon {
+      fill: $mobile-btn-down-color;
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .panel {
+    width: 648px;
+  }
+
+  .panel__opacity,
+  .panel__bar {
+    height: $tablet-video-panel-height;
+    margin-top: -$tablet-video-panel-height;
+  }
+
+  .panel__space {
+    display: none;
+  }
+
+  .panel__timeline {
+    left: 93px;
+    transform: translateY(-50%);
+
+    width: 389px;
+  }
+
+  .panel__slider {
+    left: 32%;
+  }
+
+  .panel__buttons {
+    transform: none;
+  }
+
+  .panel__btn {
+    &--replay {
+      margin-left: 35px;
+    }
+
+    &--cc {
+      margin-right: 31px;
+    }
+
+    &--fullscreen {
+      margin-right: 41px;
+    }
+
+    & path,
+    & polygon {
+      fill: $tablet-btn-fresh-color;
+    }
+
+    &:hover {
+      & path,
+      & polygon {
+        fill: $tablet-btn-hover-color;
+      }
+    }
+
+    &:active {
+      & path,
+      & polygon {
+        fill: $tablet-btn-down-color;
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .panel {
+    width: 800px;
+  }
+
+  .panel__timeline {
+    width: 540px;
+  }
+
+  .panel__slider {
+    left: 25.6%;
+  }
+}

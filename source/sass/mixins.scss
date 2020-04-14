@@ -37,8 +37,27 @@
   padding-left: $w; // 512px размер отступа равен ширине нового изображения
 }
 
+// $values: (w:200px, fz:14px, lh:21px);
+// @include btn($values...) { padding: 18px 40px; border-radius:5px; };
+@mixin btn($w:100px, $fz:21px, $lh:26px, $ff:inherit, $tt:uppercase, $cr:$primary-text-color, $bg:$primary-color) {
+
+  display: block;
+  min-width: $w;
+  padding: 16px 0;
+
+  font-family: $ff;
+  font-size: $fz;
+  line-height: $lh;
+  text-align: center;
+  text-transform: $tt;
+  color: $cr;
+
+  background-color: $bg;
+  @content;
+}
+
 // @include button($pt:17px, $ph:47px);
-@mixin button($pt, $ph, $pb:$pt, $fz:21px, $lh:26px, $ff:inherit, $tt:uppercase, $cr:$primary-text-color, $bc:$primary-color) {
+@mixin button($pt, $ph, $pb:$pt, $fz:21px, $lh:26px, $ff:inherit, $tt:uppercase, $cr:$primary-text-color, $bg:$primary-color) {
 
   display: block;
   padding: $pt $ph $pb; // top horizon bottom;
@@ -50,14 +69,21 @@
   text-transform: $tt;
   color: $cr;
 
-  background-color: $bc;
+  background-color: $bg;
   border: none;
+  @content;
 }
 
 @mixin box-shadow-left-right() {
-  box-shadow:
-    5px 0 5px 0 rgba(0, 1, 1, 0.15),
-    -5px 0 5px 0 rgba(0, 1, 1, 0.15);
+  // box-shadow:
+  //   5px 0 5px 0 rgba(0, 1, 1, 0.15),
+  //   -5px 0 5px 0 rgba(0, 1, 1, 0.15);
+
+  // box-shadow:
+  //   2px 0 2px 0 rgba(50, 50, 50, 0.75),
+  //   -2px 0 2px 0 rgba(50, 50, 50, 0.75);
+
+  box-shadow: none;
 }
 
 @mixin min-max($min-width, $max-width, $padding) {
@@ -67,3 +93,4 @@
   box-sizing: border-box;
   margin: 0 auto;
 }
+

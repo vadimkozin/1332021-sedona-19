@@ -29,9 +29,11 @@
 }
 
 .invitation__button {
-  margin-top: 15px;
+  margin-top: 35px;
 
-  @include button($pt:17px, $ph:40px);
+  @include button($pt:17px, $ph:45px) {
+    display: inline-block;
+  }
 }
 
 @media (min-width: $tablet-width) {
