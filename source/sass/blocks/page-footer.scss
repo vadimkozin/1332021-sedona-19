@@ -5,12 +5,13 @@
   width: 320px;
 
   background-color: $bg-main-color;
-  outline: 1px dotted blue;  /* tmp */
+
+  @include box-shadow-left-right();
 }
 
 .page-footer__visit {
   margin: 0;
-  padding-top: 30px;
+  padding-top: 80px;
   padding-bottom: 16px;
 
   font-size: 21px;

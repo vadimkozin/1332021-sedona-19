@@ -19,3 +19,12 @@ $elem-outer-down-color: #d5d5d5;
 $elem-inner-fresh-color: hsl(0, 0%, 20%); // #333333
 $elem-inner-hover-color: hsl(0, 0%, 20%);
 $elem-inner-down-color: hsla(0, 0%, 20%, 0.3);
+// панель управления видео
+$mobile-btn-fresh-color: hsla(204, 10%, 40%, 1);  //#5c6870;
+$mobile-btn-hover-color: hsl(0, 0%, 20%);         //#333333;
+$mobile-btn-down-color: hsla(0, 0%, 20%, 0.3);
+$tablet-btn-fresh-color: hsla(0, 0%, 100%, 1);    //#ffffff;
+$tablet-btn-hover-color: hsla(0, 0%, 100%, 0.6);
+$tablet-btn-down-color: hsla(0, 0%, 100%, 0.3);
+$mobile-video-panel-height: 45px;
+$tablet-video-panel-height: 93px;
