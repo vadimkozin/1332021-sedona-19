@@ -9,8 +9,23 @@ $color-grey: #333333;
 $bg-color-location: #eeeeee;
 $divider-color: #d6d6d6;
 $white-snow-color: $bg-color;
+$mobile-width: 320px;
 $tablet-width: 768px;
 $desktop-width: 1200px;
+
+// зазоры слева/справа на устройствах
+$gap-mobile: 20px;
+$gap-tablet: 60px;
+$gap-desktop: 120px;
+$gap-mobile-x2: $gap-mobile * 2;
+$gap-tablet-x2: $gap-tablet * 2;
+$gap-desktop-x2: $gap-desktop * 2;
+
+// видимая ширина на устройствах
+$wrapper-mobile-width: $mobile-width - $gap-mobile-x2;     // 280px
+$wrapper-tablet-width: $tablet-width - $gap-tablet-x2;     // 648px
+$wrapper-desktop-width: $desktop-width - $gap-desktop-x2;  // 960px
+
 // элементы input на форме
 $placeholder-color: $secondary-text-color;
 $elem-outer-fresh-color: $bg-color;
@@ -19,6 +34,7 @@ $elem-outer-down-color: #d5d5d5;
 $elem-inner-fresh-color: hsl(0, 0%, 20%); // #333333
 $elem-inner-hover-color: hsl(0, 0%, 20%);
 $elem-inner-down-color: hsla(0, 0%, 20%, 0.3);
+
 // панель управления видео
 $mobile-btn-fresh-color: hsla(204, 10%, 40%, 1);  //#5c6870;
 $mobile-btn-hover-color: hsl(0, 0%, 20%);         //#333333;

@@ -34,67 +34,91 @@
         </div>
       </section>
 
-      <section class="photos">
-        <div class="photos__wrap">
-          <h2 class="photos__title">Фото и видео</h2>
-          <p class="photos__text">
+      <section class="media wrapper">
+        <div class="media__wrap">
+          <h2 class="media__title">Фото и видео</h2>
+          <p class="media__text">
             Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.
           </p>
         </div>
-        <ul class="photos__list photo">
-          <li class="photo__item">
-            <div class="photo__picture">
-              <img class="photo__image" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Фотография 1">
-            </div>
-            <div class="photo__text-wrap">
-              <p class="photo__title">Неродные просторы</p>
-              <p class="photo__author">Автор фото: Борис</p>
-              <div class="photo__evaluation">
-                <span class="visually-hidden">Оценка фотографии:</span>
-                <p class="photo__evaluation-like"></p>
-                <p class="photo__evaluation-value">1350</p>
+        <ul class="media__list p">
+          <li class="p__item p__item--main">
+            <div class="p__picture">
+              <picture>
+                <source media="(min-width:1200px)" srcset="img/photo-sunset-desktop@1x.jpg"> <!-- width="1200" height="400" -->
+                <source media="(min-width:768px)" srcset="img/photo-sunset-tablet@1x.jpg" >  <!-- width="648" height="400" -->
+                <img class="p__image" src="img/photo-sunset-mobile@1x.jpg" alt="Фотография 1">
+              </picture>
+              <div class="p__about">
+                <div class="p__text">
+                  <p class="p__title">Неродные просторы</p>
+                  <p class="p__author">Автор фото: Борис</p>
+                </div>
+                <div class="p__evaluation">
+                  <span class="visually-hidden">Оценка фотографии:</span>
+                  <p class="p__evaluation-like"></p>
+                  <p class="p__evaluation-value">1350</p>
+                </div>
               </div>
             </div>
           </li>
-          <li class="photo__item">
-            <div class="photo__picture">
-              <img class="photo__image" src="img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Фотография 2">
-            </div>
-            <div class="photo__text-wrap">
-              <p class="photo__title">Местная растительность</p>
-              <p class="photo__author">Автор фото: Сергей</p>
-              <div class="photo__evaluation">
-                <span class="visually-hidden">Оценка фотографии:</span>
-                <p class="photo__evaluation-like"></p>
-                <p class="photo__evaluation-value">143</p>
+          <li class="p__item">
+            <div class="p__picture">
+              <picture>
+                <source media="(min-width:1200px)" srcset="img/photo-cactus-desktop@1x.jpg" >
+                <source media="(min-width:768px)" srcset="img/photo-cactus-tablet@1x.jpg" >
+                <img class="p__image" src="img/photo-cactus-mobile@1x.jpg"  alt="Фотография 2">
+              </picture>
+              <div class="p__about">
+                <div class="p__text">
+                  <p class="p__title">Местная растительность</p>
+                  <p class="p__author">Автор фото: Сергей</p>
+                </div>
+                <div class="p__evaluation">
+                  <span class="visually-hidden">Оценка фотографии:</span>
+                  <p class="p__evaluation-like"></p>
+                  <p class="p__evaluation-value">143</p>
+                </div>
               </div>
             </div>
           </li>
-          <li class="photo__item">
-            <div class="photo__picture">
-              <img class="photo__image" src="img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Фотография 3">
-            </div>
-            <div class="photo__text-wrap">
-              <p class="photo__title">Дорога на север</p>
-              <p class="photo__author">Автор фото: Петр</p>
-              <div class="photo__evaluation">
-                <span class="visually-hidden">Оценка фотографии:</span>
-                <p class="photo__evaluation-like"></p>
-                <p class="photo__evaluation-value">96</p>
+          <li class="p__item">
+            <div class="p__picture">
+              <picture>
+                <source media="(min-width:1200px)" srcset="img/photo-roads-desktop@1x.jpg" >
+                <source media="(min-width:768px)" srcset="img/photo-roads-tablet@1x.jpg" >
+                <img class="p__image" src="img/photo-roads-mobile@1x.jpg"  alt="Фотография 3">
+              </picture>
+              <div class="p__about">
+                <div class="p__text">
+                  <p class="p__title">Дорога на север</p>
+                  <p class="p__author">Автор фото: Петр</p>
+                </div>
+                <div class="p__evaluation">
+                  <span class="visually-hidden">Оценка фотографии:</span>
+                  <p class="p__evaluation-like"></p>
+                  <p class="p__evaluation-value">96</p>
+                </div>
               </div>
             </div>
           </li>
-          <li class="photo__item">
-            <div class="photo__picture">
-              <img class="photo__image" src="img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Фотография 4">
-            </div>
-            <div class="photo__text-wrap">
-              <p class="photo__title">Мост дьявола</p>
-              <p class="photo__author">Автор фото: Антон</p>
-              <div class="photo__evaluation">
-                <span class="visually-hidden">Оценка фотографии:</span>
-                <p class="photo__evaluation-like"></p>
-                <p class="photo__evaluation-value">254</p>
+          <li class="p__item">
+            <div class="p__picture">
+              <picture>
+                <source media="(min-width:1200px)" srcset="img/photo-bridge-desktop@1x.jpg" >
+                <source media="(min-width:768px)" srcset="img/photo-bridge-tablet@1x.jpg" >
+                <img class="p__image" src="img/photo-bridge-mobile@1x.jpg"  alt="Фотография 4">
+              </picture>
+              <div class="p__about">
+                <div class="p__text">
+                  <p class="p__title">Мост дъявола</p>
+                  <p class="p__author">Автор фото: Антон</p>
+                </div>
+                <div class="p__evaluation">
+                  <span class="visually-hidden">Оценка фотографии:</span>
+                  <p class="p__evaluation-like"></p>
+                  <p class="p__evaluation-value">254</p>
+                </div>
               </div>
             </div>
           </li>

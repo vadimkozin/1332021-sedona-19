@@ -1,9 +1,18 @@
-// @include set-font($fz:18px, $lh:26px, $fw:normal);
-@mixin set-font($fz, $lh:inherit, $ff:"PT Sans", $fw:700) {
+// @include set-font($fz:18px, $lh:26px, $fw:normal, $ta:center);
+@mixin set-font($fz, $lh:inherit, $ff:"PT Sans", $fw:700, $ta:inherit) {
   font-size: $fz;
   line-height: $lh;
   font-family: $ff;
   font-weight: $fw;
+  text-align: $ta;
+  @content;
+}
+
+@mixin reset-list() {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  @content;
 }
 
 // @include insert-image($t:16px, $r:16px, $w:23px, $h:22px, $bi:none);
