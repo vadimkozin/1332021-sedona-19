@@ -1,0 +1,170 @@
+$height-about: 80px;
+
+.p {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.p__item {
+  position: relative;
+
+  display: flex;
+  padding-top: 22px;
+  padding-bottom: 16px;
+
+  &--main {
+    display: block;
+  }
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: calc(100% + 40px);
+    transform: translateX(-20px);
+
+    border-top: 1px solid $divider-color;
+  }
+
+  &:last-of-type::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+
+    width: calc(100% + 40px);
+    height: 100%;
+    transform: translateX(-20px);
+
+    border-bottom: 1px solid  $divider-color;
+  }
+}
+
+.p__picture {
+  flex-basis: 280px;
+}
+
+.p__image {
+  display: block;
+}
+
+.p__about {
+  display: flex;
+  flex-direction: column;
+}
+
+.p__text {
+  text-align: left;
+}
+
+.p__title {
+  margin-top: 16px;
+  margin-bottom: 0;
+
+  @include set-font($fz:14px, $lh:24px);
+}
+
+.p__author {
+  margin-top: 0;
+  margin-bottom: 5px;
+
+  @include set-font($fz:14px, $lh:24px, $fw:normal);
+  text-transform: none;
+  color: $color-grey;
+}
+
+.p__evaluation {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  &-like {
+    margin: 0;
+    margin-bottom: 5px;
+    width: 23px;
+    height: 21px;
+
+    background-image: url("../../img/icon-like.svg");
+    background-repeat: no-repeat;
+    background-size: 23px 21px;
+    background-position: 0 0;
+
+    opacity: 0.3;
+  }
+
+  &-value {
+    margin: 0;
+    margin-left: 10px;
+  }
+}
+
+
+@media (min-width: $tablet-width) {
+  .p__item {
+    padding: 0;
+
+    &::before,
+    &:last-of-type::after {
+      border: none;
+    }
+  }
+
+  .p__picture {
+    flex-basis: 324px;
+  }
+
+  .p__item:nth-of-type(3n) .p__about {
+    background-color: #eaeaea;
+  }
+
+  .p__about {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: $height-about;
+    background-color: #f2f2f2;
+  }
+
+  .p__text {
+    padding-left: 20px;
+  }
+
+  .p__evaluation {
+    min-width: 90px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .p__picture {
+    flex-basis: 400px;
+  }
+
+  .p__about {
+    position: relative;
+    margin-top: -$height-about;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .p__item:nth-of-type(3n) .p__about {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .p__text {
+    color: #ffffff;
+  }
+
+  .p__author {
+    color: #ffffff;
+  }
+
+  .p__evaluation {
+    color: #ffffff;
+
+    &-like {
+      opacity: 1;
+    }
+  }
+}

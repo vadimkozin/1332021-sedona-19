@@ -1,0 +1,25 @@
+//.media { //outline: 1px dotted green; }
+
+.media__wrap {
+  margin-top: 44px;
+  margin-bottom: 25px;
+  padding-left: 5px;
+  padding-right: 5px;
+  //outline: 2px dotted red; /*tmp*/
+}
+
+.media__list {
+  @include reset-list();
+}
+
+.media__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @include set-font($fz:18px, $lh:26px, $ta:center);
+}
+
+.media__text {
+  @include set-font($fz:14px, $lh:24px, $fw:normal, $ta:center);
+  color: $color-grey;
+}
