@@ -24,3 +24,27 @@
   background-color: $elem-outer-fresh-color;
   border: none;
 }
+
+@media (min-width: $tablet-width) {
+  .emotions__title {
+    &::before {
+      @include draw-line-left($t:36px, $l:0, $w:100px);
+    }
+
+    &::after {
+      @include draw-line-right($t:36px, $r:0, $w:100px);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .emotions__title {
+    &::before {
+      @include draw-line-left($t:36px, $l:0, $w:260px);
+    }
+
+    &::after {
+      @include draw-line-right($t:36px, $r:0, $w:260px);
+    }
+  }
+}

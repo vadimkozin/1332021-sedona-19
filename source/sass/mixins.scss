@@ -15,6 +15,29 @@
   @content;
 }
 
+// include draw-line-left($t:0, $l:10px, $w:100px)
+@mixin draw-line-left($t:0, $l:0, $w:100px, $h:1px, $bg:$divider-color) {
+  position: absolute;
+  content: "";
+  top: $t;
+  left: $l;
+  width: $w;
+  height: $h;
+  background-color: $bg;
+  @content;
+}
+
+@mixin draw-line-right($t:0, $r:0, $w:100px, $h:1px, $bg:$divider-color) {
+  position: absolute;
+  content: "";
+  top: $t;
+  right: $r;
+  width: $w;
+  height: $h;
+  background-color: $bg;
+  @content;
+}
+
 // @include insert-image($t:16px, $r:16px, $w:23px, $h:22px, $bi:none);
 @mixin insert-image($t:0, $r:0, $w:20px, $h:20px, $bi:none) {
   position: absolute;

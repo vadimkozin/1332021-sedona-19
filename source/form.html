@@ -34,62 +34,55 @@
         </div>
       </section>
 
-      <section class="reviews container">
+      <section class="reviews wrapper wrapper--form">
         <div class="rewiews__words-wrap">
           <h2 class="reviews__title">Оставьте свой отзыв</h2>
           <p class="reviews__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
           </p>
         </div>
 
-        <div class="container container--divider"></div>
-
         <form class="reviews__form form" action="https://echo.htmlacademy.ru">
           <fieldset class="form__person person">
-            <legend class="legend person__title">Представьтесь:</legend>
-            <div class="row">
-              <label class="row__left" for="id_firstname">Имя<span>*</span>:</label>
-              <input class="row__right" name="firstname" id="id_firstname" type="text" placeholder="Петр" required>
+            <legend class="form__legend person__title">Представьтесь:</legend>
+            <div class="person__item">
+              <label class="person__item-label" for="id_firstname">Имя<span>*</span>:</label>
+              <input class="person__item-input" name="firstname" id="id_firstname" type="text" placeholder="Петр" required>
             </div>
 
-            <div class="row">
-              <label class="row__left" for="id_lastname">Фамилия<span>*</span>:</label>
-              <input class="row__right" name="lastname" id="id_lastname" type="text" placeholder="Иванов" required>
+            <div class="person__item">
+              <label class="person__item-label" for="id_lastname">Фамилия<span>*</span>:</label>
+              <input class="person__item-input" name="lastname" id="id_lastname" type="text" placeholder="Иванов" required>
             </div>
 
-            <div class="row">
-              <label class="row__left" for="id_middlename">Фамилия<span>*</span>:</label>
-              <input class="row__right" name="middlename" id="id_middlename" type="text" placeholder="Александрович" required>
+            <div class="person__item">
+              <label class="person__item-label" for="id_middlename">Фамилия<span>*</span>:</label>
+              <input class="person__item-input" name="middlename" id="id_middlename" type="text" placeholder="Александрович" required>
             </div>
-
           </fieldset>
 
-          <div class="container container--divider"></div>
+          <fieldset class="form__contact">
+            <legend class="form__legend contact__title">Контактная информация:</legend>
 
-          <fieldset class="form__contact contact">
-            <legend class="legend contact__title">Контактная информация:</legend>
-
-            <div class="unit">
-              <label class="unit__first" for="id_phone">Контактный телефон<span>*</span>:</label>
-              <div class="unit__second">
-                <input class="unit__input" name="phone" id="id_phone" type="text" placeholder="Введите телефон" required>
-                <div class="unit__phone-icon"><span class="visually-hidden">Иконка телефонной трубки</span></div>
+            <div class="contact">
+              <div class="contact__item">
+                <label class="contact__item-label" for="id_phone">Контактный телефон<span>*</span>:</label>
+                <div class="contact__icon contact__icon-phone">
+                  <input class="contact__item-input" name="phone" id="id_phone" type="text" placeholder="Введите телефон" required>
+                </div>
               </div>
-            </div>
 
-            <div class="unit">
-              <label class="unit__first" for="id_email">Электронная почта<span>*</span>:</label>
-              <div class="unit__second">
-                <input class="unit__input" name="email" id="id_email" type="email" placeholder="Введите e-mail" required>
-                <div class="unit__email-icon"><span class="visually-hidden">Иконка электронной почты</span></div>
+              <div class="contact__item">
+                <label class="contact__item-label" for="id_email">Электронная почта<span>*</span>:</label>
+                <div class="contact__icon contact__icon-email">
+                  <input class="contact__item-input" name="email" id="id_email" type="text" placeholder="Введите e-mail" required>
+                </div>
               </div>
             </div>
 
           </fieldset>
-
-          <div class="container container--divider"></div>
 
           <fieldset class="form__impression impression">
-            <legend class="legend impression__title">Ваше общее впечатление:</legend>
+            <legend class="form__legend impression__title">Ваше общее впечатление:</legend>
 
             <input class="impression__item visually-hidden" name="impression" id="id-impr1" type="radio" value="plus" checked>
             <label class="impression__label" for="id-impr1">Скорее положительное</label>
@@ -102,33 +95,39 @@
 
           </fieldset>
 
-          <div class="container container--divider"></div>
-
-          <fieldset class="form__visited visited">
-            <legend class="legend visited__title">Посещенные достопримечательности:</legend>
-
-            <input class="visited__item visually-hidden" name="visited_devils_bridge" id="id-vis1" type="checkbox" checked>
-            <label class="visited__label" for="id-vis1">Мост Дьявола</label>
-
-            <input class="visited__item visually-hidden" name="visited_bell_mountain" id="id-vis2" type="checkbox" checked>
-            <label class="visited__label" for="id-vis2">Гора-Колокол</label>
-
-            <input class="visited__item visually-hidden" name="visited_slide_park" id="id-vis3" type="checkbox" checked>
-            <label class="visited__label" for="id-vis3">Слайд-парк</label>
-
-            <input class="visited__item visually-hidden" name="visited_red_rock" id="id-vis4" type="checkbox">
-            <label class="visited__label" for="id-vis4">Красные скалы</label>
-
+          <fieldset class="form__visited">
+            <legend class="form__legend "></legend>
+            <h2 class="visited__title">Посещенные достопримечательности:</h2>
+            <div class="visited">
+              <div class="visited__block">
+                <div class="visited__item">
+                  <input class="visited__input visually-hidden" name="visited_devils_bridge" id="id-vis1" type="checkbox" checked>
+                  <label class="visited__label" for="id-vis1">Мост Дьявола</label>
+                </div>
+                <div class="visited__item">
+                  <input class="visited__input visually-hidden" name="visited_bell_mountain" id="id-vis2" type="checkbox" checked>
+                  <label class="visited__label" for="id-vis2">Гора-Колокол</label>
+                </div>
+              </div>
+              <div class="visited__block">
+                <div class="visited__item">
+                  <input class="visited__input visually-hidden" name="visited_slide_park" id="id-vis3" type="checkbox" checked>
+                  <label class="visited__label" for="id-vis3">Слайд-парк</label>
+                </div>
+                <div class="visited__item">
+                  <input class="visited__input visually-hidden" name="visited_red_rock" id="id-vis4" type="checkbox">
+                  <label class="visited__label" for="id-vis4">Красные скалы</label>
+                </div>
+              </div>
+            </div>
           </fieldset>
 
-          <div class="container container--divider"></div>
-
           <fieldset class="form__emotions emotions">
-            <legend class="legend emotions__title">Опишите свои эмоции:</legend>
+            <legend class="form__legend emotions__title">Опишите свои эмоции:</legend>
             <textarea class="emotions__text" name="emotions" cols="40" rows="8" maxlength="1000" placeholder="Опишите подробно все свои восторги"></textarea>
           </fieldset>
 
-          <button class="form__submit button">Отправить отзыв</button>
+          <button class="form__submit">Отправить отзыв</button>
 
         </form>
       </section>

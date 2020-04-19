@@ -11,7 +11,14 @@
 
 @media (min-width: $desktop-width) {
   .wrapper {
-    //width: $wrapper-desktop-width;
-    width: 100%;
+    width: $wrapper-desktop-width;
+
+    &--photo {
+      width: 100%;
+    }
+
+    &--form {
+      width: $wrapper-desktop-width;
+    }
   }
 }
