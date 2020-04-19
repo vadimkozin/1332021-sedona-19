@@ -1,3 +1,37 @@
 //.person {}
-
 //.person__title {}
+.person__item {
+  display: flex;
+  justify-content: space-between;
+
+  height: 58px;
+  margin-bottom: 20px;
+
+  &:nth-last-of-type(1) {
+    margin-bottom: 0;
+  }
+}
+
+.person__item-label {
+  padding: 22px 15px 19px 0;
+
+  @include set-font($fz:14px, $lh:26px, $fw:normal);
+  color: $color-grey;
+}
+
+.person__item-input {
+  width: 50%;
+  flex-grow: 1;
+
+  padding: 16px 22px;
+
+  @include set-font($fz:18px, $lh:26px);
+
+  background-color: $white-snow-color;
+  border: none;
+
+  &::placeholder {
+    color: #000000;
+  }
+}
+

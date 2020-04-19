@@ -1,22 +1,79 @@
 .form {
-  & legend {
-    padding-top: 25px;
-    text-align: center;
-  }
+  display: flex;
+  flex-direction: column;
 
   & fieldset {
+    //outline: 1px dotted red;
+    position: relative;
+
     width: 100%;
     margin: 0;
     padding: 0;
     padding-bottom: 25px;
     border: none;
-    //border-bottom: 1px solid $divider-color;
+
+    &::before { // line - block separator
+      position: absolute;
+      content: "";
+      top: 0;
+      left: 0;
+      width: calc(100% + #{$gap-mobile-x2});
+      transform: translateX(-#{$gap-mobile});
+      border-top: 1px solid $divider-color;
+    }
   }
 }
 
-.form__submit.button {
+.form__legend {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin: 0 auto;
+
+  @include set-font($fz:18px, $lh:26px, $ta:center);
+}
+
+.form__submit {
   margin: 0 auto;
   margin-top: 20px;
 
   @include button($pt:16px, $ph:47px);
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    & fieldset {
+      &::before {
+        border-top: none;
+      }
+    }
+  }
+
+  .form__person {
+    order: 2;
+    flex-basis: 50%;
+  }
+
+  .form__contact {
+    order: 3;
+  }
+
+  .form__impression {
+    order: 1;
+    flex-basis: 50%;
+  }
+
+  .form__visited {
+    order: 4;
+  }
+
+  .form__emotions {
+    order: 5;
+  }
+
+  .form__submit {
+    order: 6;
+  }
 }

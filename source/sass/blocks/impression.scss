@@ -9,6 +9,10 @@
   padding-top: 12px;
   margin-bottom: 23px;
 
+  &:nth-last-of-type(1) {
+    margin-bottom: 0;
+  }
+
   @include set-font($fz:18px, $lh:26px);
   text-transform: none;
 

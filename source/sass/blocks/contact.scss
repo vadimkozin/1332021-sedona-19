@@ -1,3 +1,111 @@
-// .contact {}
+.contact {
+  display: flex;
+  flex-direction: column;
+}
 // .contact__title {}
 
+.contact__item {
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 0;
+}
+
+.contact__item-label {
+  padding-left: 22px;
+  padding-bottom: 10px;
+  margin-top: 16px;
+
+  @include set-font($fz:14px, $lh:26px, $fw:normal);
+  color: $color-grey;
+}
+
+.contact__item-input {
+  width: 100%;
+  padding: 16px 82px 16px 22px;
+
+  @include set-font($fz:18px, $lh:26px);
+
+  background-color: $white-snow-color;
+  border: none;
+
+  &::placeholder {
+    color: $placeholder-color;
+  }
+}
+
+.contact__icon {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+
+    width: 58px;
+    height: 95%;
+
+    background-color: #e6e6e6;
+  }
+
+  &-phone::before,
+  &-email::before {
+    background-repeat: no-repeat;
+    background-position: top 50% right 50%;
+    background-size: 18px 18px;
+  }
+
+  &-phone {
+    &::before {
+      background-image: url("../../img/icon-phone.svg");
+    }
+  }
+
+  &-email {
+    &::before {
+      background-image: url("../../img/icon-mail.svg");
+    }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contact__title {
+    &::before {
+      @include draw-line-left($t:36px, $l:0, $w:100px);
+    }
+
+    &::after {
+      @include draw-line-right($t:36px, $r:0, $w:100px);
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contact {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contact__title {
+    &::before {
+      @include draw-line-left($t:36px, $l:0, $w:260px);
+    }
+
+    &::after {
+      @include draw-line-right($t:36px, $r:0, $w:260px);
+    }
+  }
+
+  .contact__item {
+    flex-direction: row;
+
+    margin-bottom: 0;
+  }
+
+  .contact__item-label {
+    padding-left: 0;
+    padding-right: 16px;
+  }
+}

@@ -6,19 +6,12 @@
 }
 
 .reviews__title {
-  @include set-font($fz:18px, $lh:26px);
-  text-align: center;
+  @include set-font($fz:18px, $lh:26px, $ta:center);
 }
 
 .reviews__text {
-  padding-left: 22px;
-  padding-right: 22px;
-  text-align: center;
-
-  @include set-font($fz:14px, $lh:24px, $fw:normal);
+  @include set-font($fz:14px, $lh:24px, $fw:normal, $ta:center);
   color: $color-grey;
 }
 
-.reviews__form {
-  //outline: 2px dotted blue;
-}
+//.reviews__form {//outline: 2px dotted blue;}
