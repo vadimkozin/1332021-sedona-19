@@ -2,35 +2,38 @@
   margin: 0 auto;
   width: 320px;
   padding-top: 40px;
-  padding-bottom: 35px;
 
   background-color: $bg-main-color;
   box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
   outline: 1px dotted $white-snow-color;
+
+  &--err {
+    padding-bottom: 35px;
+  }
 
   &--ok {
     padding-bottom: 0;
   }
 }
 
-.card__wrap-text {
+.card__info {
   padding-left: 56px;
   padding-right: 56px;
+
+  text-align: center;
 }
 
 .card__title {
   @include set-font($fz:18px, $lh:26px);
-  text-align: center;
 }
 
 .card__text {
   @include set-font($fz:14px, $lh:24px, $fw:normal);
-  text-align: center;
   color: $color-grey;
 }
 
-.card__buttons {
-  &--bad {
+.card__botton-wrap {
+  &--err {
     margin-top: 25px;
   }
 
@@ -48,3 +51,54 @@
 
   @include button($pt:16px, $ph:76px, $fz:18px, $lh:26px);
 }
+
+@media (min-width: $tablet-width) {
+  .card {
+    min-height: 347px;
+
+    &--err {
+      width: 400px;
+    }
+
+    &--ok {
+      width: 640px;
+    }
+  }
+
+  .card__info {
+    padding-left: 61px;
+    padding-right: 61px;
+  }
+
+  .card__title {
+    @include set-font($fz:30px, $lh:40px);
+  }
+
+  .card__text {
+    @include set-font($fz:14px, $lh:24px, $fw:normal);
+  }
+
+  .card__botton-wrap {
+    &--ok {
+      margin-top: 40px;
+      padding-top: 44px;
+      padding-bottom: 44px;
+    }
+  }
+
+  .card__button {
+    &--err {
+      margin: 0 auto;
+      padding-left: 122px;
+      padding-right: 122px;
+    }
+
+    &--ok {
+      margin: 0 auto;
+      padding-left: 154px;
+      padding-right: 154px;
+    }
+  }
+}
+
+//@media (min-width: $desktop-width) {}

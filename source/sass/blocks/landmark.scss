@@ -1,4 +1,6 @@
 .landmark {
+  //outline: 1px solid red;
+
   display: flex;
   flex-direction: column;
 
@@ -7,38 +9,48 @@
 
   &--city {
     background-image: url("../../img/bg-triangle.svg");
-    background-position: 0 0;
+    background-position: 0 -20px;
     background-size: 320px 37px;
     background-repeat: no-repeat;
   }
 }
 
-.landmark__content {
+.landmark__info {
   &--city {
-    padding: 61px 28px 30px;
+    padding: 43px 28px 30px;
   }
 
   &--bridge {
-    padding: 35px 30px 30px;
+    padding: 25px 30px 30px;
   }
 
   text-align: center;
 }
 
 .landmark__title {
+  margin-bottom: 0;
   font-size: 18px;
   line-height: 26px;
+
+  & br {
+    display: none;
+  }
+}
+
+.landmark__number {
+  margin-top: 10px;
 }
 
 .landmark__number,
 .landmark__text {
-  font-weight: 400;
+  font-weight: normal;
   font-size: 14px;
   line-height: 21px;
 }
 
 .landmark__picture {
   line-height: 0;
+  margin-top: -2px;
 }
 
 @media (min-width: $tablet-width) {
@@ -48,8 +60,45 @@
     background-image: none;
   }
 
-  .landmark__content {
+  .landmark__info {
     width: 256px;
+    margin-top: 46px;
+    margin-left: 47px;
+    margin-right: 47px;
+
+    &--city,
+    &--bridge {
+      padding: 0;
+    }
+  }
+
+  .landmark__wrap {
+    & .landmark__title,
+    & .landmark__number,
+    & .landmark__text {
+      margin: 0;
+    }
+
+    & .landmark__number {
+      margin-top: 10px;
+    }
+
+    & .landmark__text {
+      margin-top: 20px;
+    }
+  }
+
+  .landmark__title {
+    font-size: 21px;
+    line-height: 26px;
+
+    & br {
+      display: block;
+    }
+  }
+
+  .landmark__info--bridge .landmark__title {
+    margin-top: -3px;
   }
 
   .landmark__picture {
@@ -61,7 +110,7 @@
       background-image: url("../../img/main-bridge-tablet@1x.jpg");
       order: -1;
     }
-
+    margin-top: 0;
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: 512px 256px;
@@ -72,8 +121,22 @@
 }
 
 @media (min-width: $desktop-width) {
-  .landmark__content {
+  .landmark__info {
     width: 400px;
+    margin-top: 46px;
+    margin-left: 67px;
+    margin-right: 67px;
+
+    &--bridge {
+      margin-left: 90px;
+      margin-right: 90px;
+    }
+  }
+
+  .landmark__wrap .landmark__title {
+    margin-top: 7px;
+    margin-left: 30px;
+    margin-right: 30px;
   }
 
   .landmark__picture {

@@ -8,10 +8,10 @@
   </head>
   <body>
     <header class="page-header">
-      <a href="" class="page-header__logo">
+      <a href="./index.html" class="page-header__logo">
         <img class="page-header__logo-image" src="./img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип городка Седона">
       </a>
-      <nav class="main-nav">
+      <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list menu">
@@ -35,42 +35,42 @@
       </section>
 
       <section class="reviews wrapper wrapper--form">
-        <div class="rewiews__words-wrap">
+        <div class="rewiews__info">
           <h2 class="reviews__title">Оставьте свой отзыв</h2>
           <p class="reviews__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях
           </p>
         </div>
 
         <form class="reviews__form form" action="https://echo.htmlacademy.ru">
-          <fieldset class="form__person person">
-            <legend class="form__legend person__title">Представьтесь:</legend>
-            <div class="person__item">
-              <label class="person__item-label" for="id_firstname">Имя<span>*</span>:</label>
-              <input class="person__item-input" name="firstname" id="id_firstname" type="text" placeholder="Петр" required>
-            </div>
+          <div class="form__item form__item--person person">
+            <h2 class="form__legend person__title">Представьтесь:</h2>
+            <div class="person__block">
+              <div class="person__item">
+                <label class="person__item-label" for="id_firstname">Имя<span>*</span>:</label>
+                <input class="person__item-input" name="firstname" id="id_firstname" type="text" placeholder="Петр" required>
+              </div>
 
-            <div class="person__item">
-              <label class="person__item-label" for="id_lastname">Фамилия<span>*</span>:</label>
-              <input class="person__item-input" name="lastname" id="id_lastname" type="text" placeholder="Иванов" required>
-            </div>
+              <div class="person__item">
+                <label class="person__item-label" for="id_lastname">Фамилия<span>*</span>:</label>
+                <input class="person__item-input" name="lastname" id="id_lastname" type="text" placeholder="Иванов" required>
+              </div>
 
-            <div class="person__item">
-              <label class="person__item-label" for="id_middlename">Фамилия<span>*</span>:</label>
-              <input class="person__item-input" name="middlename" id="id_middlename" type="text" placeholder="Александрович" required>
-            </div>
-          </fieldset>
+              <div class="person__item">
+                <label class="person__item-label" for="id_middlename">Отчество<span>*</span>:</label>
+                <input class="person__item-input" name="middlename" id="id_middlename" type="text" placeholder="Александрович" required>
+              </div>
+          </div>
+          </div>
 
-          <fieldset class="form__contact">
-            <legend class="form__legend contact__title">Контактная информация:</legend>
-
-            <div class="contact">
+          <div class="form__item form__item--contact contact">
+            <h2 class="form__legend contact__title line line--contact">Контактная информация:</h2>
+            <div class="contact__block">
               <div class="contact__item">
-                <label class="contact__item-label" for="id_phone">Контактный телефон<span>*</span>:</label>
+                <label class="contact__item-label" for="id_phone"><span class="contact__item-label2">Контактный</span> телефон<span>*</span>:</label>
                 <div class="contact__icon contact__icon-phone">
                   <input class="contact__item-input" name="phone" id="id_phone" type="text" placeholder="Введите телефон" required>
                 </div>
               </div>
-
               <div class="contact__item">
                 <label class="contact__item-label" for="id_email">Электронная почта<span>*</span>:</label>
                 <div class="contact__icon contact__icon-email">
@@ -78,27 +78,29 @@
                 </div>
               </div>
             </div>
+          </div>
 
-          </fieldset>
+          <div class="form__item form__item--impression impression">
+            <h2 class="form__legend impression__title">Ваше общее впечатление:</h2>
+            <div class="impression__block">
+              <div class="impression__item">
+                <input class="impression__input visually-hidden" name="impression" id="id-impr1" type="radio" value="plus" checked>
+                <label class="impression__label" for="id-impr1">Скорее положительное</label>
+              </div>
+              <div class="impression__item">
+                <input class="impression__input visually-hidden" name="impression" id="id-impr2" type="radio" value="minus">
+                <label class="impression__label" for="id-impr2">Скорее отрицательное</label>
+              </div>
+              <div class="impression__item">
+                <input class="impression__input visually-hidden" name="impression" id="id-impr3" type="radio" value="plus-minus">
+                <label class="impression__label" for="id-impr3">Затрудняюсь ответить</label>
+              </div>
+            </div>
+          </div>
 
-          <fieldset class="form__impression impression">
-            <legend class="form__legend impression__title">Ваше общее впечатление:</legend>
+          <div class="form__item form__item--visited visited">
+            <h2 class="form__legend visited__title line line--visited">Посещенные достопримечательности:</h2>
 
-            <input class="impression__item visually-hidden" name="impression" id="id-impr1" type="radio" value="plus" checked>
-            <label class="impression__label" for="id-impr1">Скорее положительное</label>
-
-            <input class="impression__item visually-hidden" name="impression" id="id-impr2" type="radio" value="minus">
-            <label class="impression__label" for="id-impr2">Скорее отрицательное</label>
-
-            <input class="impression__item visually-hidden" name="impression" id="id-impr3" type="radio" value="plus-minus">
-            <label class="impression__label" for="id-impr3">Затрудняюсь ответить</label>
-
-          </fieldset>
-
-          <fieldset class="form__visited">
-            <legend class="form__legend "></legend>
-            <h2 class="visited__title">Посещенные достопримечательности:</h2>
-            <div class="visited">
               <div class="visited__block">
                 <div class="visited__item">
                   <input class="visited__input visually-hidden" name="visited_devils_bridge" id="id-vis1" type="checkbox" checked>
@@ -119,15 +121,18 @@
                   <label class="visited__label" for="id-vis4">Красные скалы</label>
                 </div>
               </div>
-            </div>
-          </fieldset>
 
-          <fieldset class="form__emotions emotions">
-            <legend class="form__legend emotions__title">Опишите свои эмоции:</legend>
+          </div>
+
+          <div class="form__item form__item--emotions emotions">
+            <h2 class="form__legend emotions__title line line--emotions">Опишите свои эмоции:</h2>
             <textarea class="emotions__text" name="emotions" cols="40" rows="8" maxlength="1000" placeholder="Опишите подробно все свои восторги"></textarea>
-          </fieldset>
+          </div>
 
-          <button class="form__submit">Отправить отзыв</button>
+          <div class="form__button-wrap">
+            <button class="form__button">Отправить отзыв</button>
+            <p class="form__footnote">* &nbsp;&ndash;&nbsp; обязательные поля</p>
+          </div>
 
         </form>
       </section>
@@ -175,29 +180,31 @@
     </footer>
 
 <br>  <!-- временно чтобы было видно карточку -->
-    <section class="modal card card--bad">
+    <section class="modal card card--err">
       <h2 class="visually-hidden">Ошибки при заполнении формы</h2>
-      <div class="card__wrap-text">
+      <div class="card__info">
         <h3 class="card__title">Что-то пошло не так!</h3>
         <p class="card__text">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
       </div>
-      <div class="card__buttons card__buttons--bad">
-        <button class="card__button" type="button">Ок</button>
+      <div class="card__botton-wrap card__botton-wrap--err">
+        <button class="card__button card__button--err" type="button">Ок</button>
       </div>
     </section>
 
 <br> <!-- временно чтобы было видно карточку -->
     <section class="modal card card--ok">
       <h2 class="visually-hidden">Сообщение при успешной отправке формы</h2>
-      <div class="card__wrap-text">
+      <div class="card__info">
         <h3 class="card__title">Ваш отзыв отправлен!</h3>
         <p class="card__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
       </div>
-      <div class="card__buttons card__buttons--ok">
-        <button class="card__button" type="button">Закрыть окно</button>
+      <div class="card__botton-wrap card__botton-wrap--ok">
+        <button class="card__button card__button--ok" type="button">Закрыть окно</button>
       </div>
 
     </section>
 <br> <!-- временно чтобы было видно карточку -->
+
+  <script src="./js/app.js"></script>
   </body>
 </html>

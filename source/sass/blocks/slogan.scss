@@ -1,8 +1,7 @@
-@charset "UTF-8";
+//.slogan {outline: 1px solid green;}
 
-//.slogan {}
-
-.slogan__content {
+.slogan__wrap {
+  //outline: 1px dotted grey;
   padding: 43px 32px 10px;
 
   text-align: center;
@@ -11,11 +10,40 @@
 
 .slogan__title {
   display: block;
+  margin-bottom: 25px;
 
   font-size: 18px;
 }
 
-.slogan__five-reasons {
-  font-weight: 400;
+.slogan__text {
+  font-weight: normal;
   font-size: 14px;
+}
+
+@media (min-width: $tablet-width) {
+  .slogan__wrap {
+    padding-left: 135px;
+    padding-right: 135px;
+    padding-top: 50px;
+    padding-bottom: 36px;
+  }
+
+  .slogan__title {
+    font-size: 21px;
+    line-height: 26px;
+    //outline: 1px dotted red;
+    margin-bottom: 28px;
+  }
+
+  .slogan__text {
+    //outline: 1px dotted red;
+    margin-left: -8px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .slogan__wrap {
+    padding-left: 355px;
+    padding-right: 355px;
+  }
 }

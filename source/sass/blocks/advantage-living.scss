@@ -1,6 +1,18 @@
-//.advantage-living {}
+//.advantage-living { outline: 1px dotted red; }
 
 .advantage-living__list {
-  padding: 0;
-  list-style: none;
+  @include reset-list();
+
+  width: $wrapper-mobile-width;
+  margin: 0 auto;
+  margin-top: 18px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .advantage-living__list {
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }

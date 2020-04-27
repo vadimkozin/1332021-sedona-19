@@ -22,6 +22,18 @@
     margin-right: 6px;
 
     background-color: $primary-color;
+
+    &:hover {
+      background-color: $bg-btn-hover;
+    }
+
+    &:active {
+      background-color: $bg-btn-down;
+    }
+
+    &:active path {
+      opacity: 0.3;
+    }
   }
 
   & path {

@@ -3,17 +3,21 @@
   text-align: center;
 }
 
-.invitation__content {
+.invitation__wrap {
+  padding-top: 32px;
   padding-left: 25px;
   padding-right: 25px;
 }
 
-.invitation__question {
+.invitation__title {
   font-size: 21px;
   line-height: 26px;
 }
 
 .invitation__text {
+  margin-top: 20px;
+  margin-bottom: 8px;
+
   font-size: 14px;
   line-height: 24px;
   font-weight: normal;
@@ -24,44 +28,72 @@
   }
 }
 
-.invitation__break {
-  display: none;
-}
-
 .invitation__button {
-  margin-top: 35px;
+  margin-top: 25px;
 
   @include button($pt:17px, $ph:45px) {
     display: inline-block;
+    vertical-align: baseline;
+    padding-right: 48px;
+  }
+
+  &:hover {
+    background-color: $bg-btn-hover;
+  }
+
+  &:active {
+    background-color: $bg-btn-down;
+    color: $color-btn-down;
+  }
+
+  &--disabled {
+    background-color: $bg-btn-disabled;
   }
 }
 
 @media (min-width: $tablet-width) {
-  .invitation__content {
+  .invitation {
+    padding-top: 20px;
+    padding-bottom: 58px;
+    margin-bottom: 0;
+  }
+
+  .invitation__wrap {
     padding-left: 160px;
     padding-right: 160px;
   }
 
-  .invitation__question {
+  .invitation__title {
     font-size: 30px;
     line-height: 26px;
   }
 
   .invitation__text {
+    margin-top: 28px;
+    margin-bottom: 14px;
+
     & br {
-      display: inline;
+      display: block;
     }
   }
 
   .invitation__button {
-    margin-top: 15px;
+    margin-top: 27px;
     padding: 17px 136px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .invitation__content {
+  .invitation {
+    padding-bottom: 65px;
+  }
+
+  .invitation__wrap {
     padding-left: 380px;
     padding-right: 380px;
+  }
+
+  .invitation__button {
+    margin-top: 32px;
   }
 }

@@ -3,11 +3,7 @@
   flex-direction: column;
 }
 
-.visited__title {
-  display: block;
-
-  @include set-font($fz:18px, $lh:26px, $ta:center);
-}
+//.visited__title {}
 
 .visited__block {
   display: flex;
@@ -15,7 +11,6 @@
 }
 
 .visited__item {
-  //outline: 1px dotted red;
   width: 280px;
   margin-bottom: 29px;
 }
@@ -25,7 +20,7 @@
 
   display: block;
   min-height: 51px;
-  padding-left: 75px;
+  padding-left: 79px;
   padding-top: 12px;
 
   &:nth-last-of-type(1) {
@@ -38,8 +33,6 @@
   &::before {
     position: absolute;
     content: "";
-    // top: 0;
-    // left: 0;
     top: 50%;
     transform: translateY(-50%);
     left: 0;
@@ -111,53 +104,72 @@
   }
 
   .visited__title {
-    position: relative;
-    padding-left: 185px;
-    padding-right: 185px;
-
-    @include set-font($fz:21px, $lh:26px, $ta:center);
-
-    &::before {
-      @include draw-line-left($t:16px, $l:0, $w:100px);
-    }
-
-    &::after {
-      @include draw-line-right($t:16px, $r:0, $w:100px);
-    }
+    padding: 29px 185px 44px;
   }
 
   .visited__block {
-    //outline: 4px dotted green;
-
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+    min-height: 88px;
   }
 
   .visited__item {
     width: 240px;
-    margin-bottom: 42px;
+
+    &:first-of-type {
+      margin-left: 96px;
+    }
+
+    &:last-of-type {
+      margin-right: 52px;
+    }
   }
 }
 
 @media (min-width: $desktop-width) {
-  .visited__item {
-    margin-bottom: 50px;
-  }
-
   .visited__title {
     padding-left: 340px;
     padding-right: 340px;
   }
-}
 
-@media (min-width: $desktop-width) {
-  .visited__title {
-    &::before {
-      @include draw-line-left($t:16px, $l:0, $w:260px);
+  .visited__block {
+    display: inline-flex;
+    justify-content: flex-start;
+    flex-basis: 50%;
+    min-height: 0;
+
+    &:first-of-type .visited__item:last-of-type {
+      width: 200px;
+      max-width: 240px;
+      margin-left: 21px;
     }
 
-    &::after {
-      @include draw-line-right($t:16px, $r:0, $w:260px);
+    &:last-of-type .visited__item:first-of-type {
+      width: 200px;
+      max-width: 240px;
+      margin-left: 40px;
+    }
+
+    &:last-of-type .visited__item:last-of-type {
+      width: 205px;
+      max-width: 205px;
+      margin-left: 35px;
+    }
+  }
+
+  .visited__item {
+    width: calc(960px / 4); // 240px
+    height: fit-content;
+
+    &:first-of-type {
+      margin: 0;
+    }
+
+    &:last-of-type {
+      margin: 0;
     }
   }
 }

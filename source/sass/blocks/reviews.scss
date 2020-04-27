@@ -1,8 +1,10 @@
-// .reviews {}
+// .reviews {
+//   outline: 1px dotted red;
+// }
 
-.rewiews__words-wrap {
-  padding-top: 20px;
-  padding-bottom: 5px;
+.rewiews__info {
+  padding-top: 22px;
+  padding-bottom: 2px;
 }
 
 .reviews__title {
@@ -10,8 +12,44 @@
 }
 
 .reviews__text {
+  padding-top: 11px;
+
   @include set-font($fz:14px, $lh:24px, $fw:normal, $ta:center);
   color: $color-grey;
 }
 
-//.reviews__form {//outline: 2px dotted blue;}
+.reviews__form {
+  padding-bottom: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .rewiews__info {
+    margin-left: 104px;
+    margin-right: 104px;
+    padding-top: 50px;
+    padding-right: 3px;
+  }
+
+  .reviews__title {
+    margin-bottom: 19px;
+    font-size: 30px;
+    line-height: 26px;
+  }
+
+  .reviews__form {
+    margin-top: 40px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .rewiews__info {
+    margin-left: 260px;
+    margin-right: 260px;
+    padding-top: 87px;
+    padding-right: 3px;
+  }
+
+  .reviews__form {
+    margin-top: 25px;
+  }
+}

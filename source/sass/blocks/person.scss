@@ -1,5 +1,6 @@
 //.person {}
 //.person__title {}
+
 .person__item {
   display: flex;
   justify-content: space-between;
@@ -10,28 +11,72 @@
   &:nth-last-of-type(1) {
     margin-bottom: 0;
   }
+
+  &-label {
+    padding: 18px 15px 19px 0;
+
+    @include set-font($fz:14px, $lh:26px, $fw:normal);
+    color: $color-grey;
+  }
+
+  &-input {
+    min-width: 192px;
+    flex-grow: 1;
+
+    padding: 16px 22px;
+
+    @include set-font($fz:18px, $lh:26px);
+
+    background-color: $white-snow-color;
+    border: none;
+
+    &::placeholder {
+      color: #000000;
+    }
+  }
+
+  &:first-of-type &-input {
+    min-width: 230px;
+  }
 }
 
-.person__item-label {
-  padding: 22px 15px 19px 0;
+@media (min-width: $tablet-width) {
+  .person__title {
+    text-align: left;
+  }
 
-  @include set-font($fz:14px, $lh:26px, $fw:normal);
-  color: $color-grey;
+  .person__block {
+    margin-top: 36px;
+  }
+
+  .person__item {
+    &-input {
+      width: 178px;
+      min-width: 0;
+      flex: none;
+    }
+
+    &:first-of-type &-input {
+      min-width: 216px;
+    }
+  }
 }
 
-.person__item-input {
-  width: 50%;
-  flex-grow: 1;
+@media (min-width: $desktop-width) {
+  .person__title {
+    text-align: left;
+  }
 
-  padding: 16px 22px;
+  .person__item {
+    &-input {
+      width: 312px;
+      min-width: 0;
+      flex: none;
+    }
 
-  @include set-font($fz:18px, $lh:26px);
-
-  background-color: $white-snow-color;
-  border: none;
-
-  &::placeholder {
-    color: #000000;
+    &:first-of-type &-input {
+      min-width: 350px;
+    }
   }
 }
 
