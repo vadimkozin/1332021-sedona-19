@@ -18,4 +18,13 @@
   vertical-align: bottom;
 
   padding-left: 10px;
+
+  &:hover path {
+    fill: #81b3d2;
+  }
+
+  &:active path {
+    fill: #000000;
+    opacity: 0.3;
+  }
 }

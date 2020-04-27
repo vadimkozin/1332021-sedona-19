@@ -10,6 +10,7 @@ $bg-color-location: #eeeeee;
 $divider-color: #d6d6d6;
 $white-snow-color: $bg-color;
 $mobile-width: 320px;
+$mobile-width-only: 767px;
 $tablet-width: 768px;
 $desktop-width: 1200px;
 
@@ -44,3 +45,9 @@ $tablet-btn-hover-color: hsla(0, 0%, 100%, 0.6);
 $tablet-btn-down-color: hsla(0, 0%, 100%, 0.3);
 $mobile-video-panel-height: 45px;
 $tablet-video-panel-height: 93px;
+
+// изменения состояний кнопок / элементов меню на мобильных
+$bg-btn-hover: #669ec0;
+$bg-btn-down: #5496bd;
+$bg-btn-disabled: #e5e5e5;
+$color-btn-down:hsla(0, 0%, 100%, 0.3); //#ffffff, opacity:0.3

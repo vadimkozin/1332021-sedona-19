@@ -1,35 +1,52 @@
-@charset "UTF-8";
-
 .main-nav {
   position: relative;
   width: 320px;
   margin: 0 auto;
 }
 
-.main-nav__list {
-  margin: 0;
-  padding: 0;
+//.main-nav__wrapper {}
 
-  list-style: none;
+.main-nav__list {
+  @include reset-list();
 }
 
-.main-nav__toggle {
-  @include insert-image($t:16px, $r:16px, $w:23px, $h:22px, $bi:url("../../img/icon-cross.svg"));
+.main-nav--closed .main-nav__toggle {
+  @include insert-image($t:16px, $r:19px, $w:23px, $h:22px, $bi:url("../../img/icon-menu.svg"));
+  cursor: pointer;
+}
+
+.main-nav--opened .main-nav__toggle {
+  @include insert-image($t:16px, $r:19px, $w:23px, $h:21px, $bi:url("../../img/icon-cross.svg"));
+}
+
+@media (max-width: $mobile-width-only) {
+  .main-nav--closed .main-nav__list {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__toggle {
+    display: none;
+  }
+
+  .main-nav--nojs .main-nav__list {
+    display: block;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .main-nav {
-    width: auto;
+    width: $tablet-width;
     min-height: 56px;
-    margin: 0;
+    margin: 0 auto;
   }
 
-  .main-nav__list {
-    display: flex;
-    justify-content: space-around;
+  .main-nav .main-nav__toggle {
+    display: none;
   }
+}
 
-  .main-nav__toggle {
-    background-image: none;
+@media (min-width: $desktop-width) {
+  .main-nav {
+    width: $desktop-width;
   }
 }

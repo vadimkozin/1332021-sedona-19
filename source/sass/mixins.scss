@@ -40,8 +40,9 @@
 
 // @include insert-image($t:16px, $r:16px, $w:23px, $h:22px, $bi:none);
 @mixin insert-image($t:0, $r:0, $w:20px, $h:20px, $bi:none) {
-  position: absolute;
   content: "";
+
+  position: absolute;
   top: $t;
   right: $r;
 

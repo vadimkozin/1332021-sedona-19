@@ -1,8 +1,31 @@
-// .living { padding-left: 22px; }
+//.living { outline: 1px dotted red; }
 
 .living__item {
   min-height: 120px;
-  outline: 1px dotted blue; /*tmp*/
+}
+
+.living__item--house .living__photo {
+  padding-top: 10px;
+}
+
+.living__item--souvenirs .living__photo {
+  padding-top: 2px;
+  padding-left: 4px;
+}
+
+//.living__item--food .living__photo {}
+
+.living__item--souvenirs .living__title {
+  margin-top: 12px;
+}
+
+.living__item--food .living__title {
+  margin-top: 4px;
+  margin-left: -4px;
+}
+
+.living__item--food .living__text {
+  margin-left: -4px;
 }
 
 .living__photo {
@@ -10,12 +33,11 @@
   vertical-align: top;
 }
 
-.living__content {
+.living__wrap {
   display: inline-block;
   vertical-align: top;
 
-  max-width: 210px;
-  margin-top: -10px;
+  max-width: 220px;
   padding-left: 10px;
 }
 
@@ -30,15 +52,109 @@
   line-height: 21px;
   font-weight: normal;
   color: $color-grey;
+
+  & br {
+    display: none;
+  }
 }
 
 @media (min-width: $tablet-width) {
   .living {
     display: flex;
+  }
+
+  .living__item {
+    min-height: 332px;
+    width: calc(100% / 3);
+
+    text-align: center;
+
+    &:nth-of-type(2) {
+      order: 3;
+    }
+  }
+
+  .living__item--house .living__photo {
+    padding-top: 60px;
+
+    .living__image {
+      width: 75px;
+      height: 72px;
+    }
+  }
+
+  .living__item--food .living__photo {
+    padding-top: 63px;
+
+    .living__image {
+      width: 77px;
+      height: 68px;
+    }
+  }
+
+  .living__item--souvenirs .living__photo {
+    padding-top: 57px;
+
+    .living__image {
+      width: 64px;
+      height: 75px;
+    }
+  }
+
+  .living__wrap {
+    display: block;
+    margin: 0 auto;
+    margin-top: 22px;
+    margin-left: 51px;
+    margin-right: 51px;
+    padding: 0;
+  }
+
+  .living__item--house .living__wrap {
+    margin-left: 46px;
+    margin-right: 46px;
+  }
+
+  .living__item--souvenirs .living__wrap {
+    margin-left: 46px;
+    margin-right: 46px;
+  }
+
+  .living__title {
+    font-size: 21px;
+    line-height: 26px;
+  }
+
+  .living__text {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+
+    & br {
+      display: block;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .living__wrap {
+    max-width: 285px;
+    margin: 0 auto;
+    margin-top: 22px;
+  }
+
+  .living__item--house .living__wrap {
+    margin-left: 73px;
+    margin-right: 73px;
+  }
+
+  .living__item--souvenirs .living__wrap {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+
+  .living__item--souvenirs .living__photo {
     padding-left: 0;
   }
 
-  .living__content {
-    max-width: none;
-  }
 }

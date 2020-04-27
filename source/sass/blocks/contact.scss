@@ -1,20 +1,26 @@
 .contact {
   display: flex;
   flex-direction: column;
+
+  margin-bottom: 4px;
 }
-// .contact__title {}
+
+//.contact__title {outline: 1px dotted green;}
 
 .contact__item {
   display: flex;
   flex-direction: column;
 
   margin-bottom: 0;
+
+  &:last-of-type .contact__item-label {
+    margin-top: 10px;
+  }
 }
 
 .contact__item-label {
   padding-left: 22px;
-  padding-bottom: 10px;
-  margin-top: 16px;
+  padding-bottom: 8px;
 
   @include set-font($fz:14px, $lh:26px, $fw:normal);
   color: $color-grey;
@@ -71,31 +77,32 @@
 }
 
 @media (min-width: $tablet-width) {
-  .contact__title {
-    &::before {
-      @include draw-line-left($t:36px, $l:0, $w:100px);
-    }
+  .contact__item:first-of-type .contact__item-label {
+    padding-top: 3px;
+  }
 
-    &::after {
-      @include draw-line-right($t:36px, $r:0, $w:100px);
-    }
+  .contact__item:last-of-type .contact__item-label {
+    padding-top: 11px;
   }
 }
 
 @media (min-width: $desktop-width) {
-  .contact {
-    flex-direction: row;
+  .contact__title {
+    padding-top: 16px;
+    padding-bottom: 74px;
+  }
+
+  .contact__block {
+    display: flex;
     justify-content: space-between;
   }
 
-  .contact__title {
-    &::before {
-      @include draw-line-left($t:36px, $l:0, $w:260px);
-    }
+  .contact__item:first-of-type .contact__item-label {
+    padding-top: 17px;
+  }
 
-    &::after {
-      @include draw-line-right($t:36px, $r:0, $w:260px);
-    }
+  .contact__item:last-of-type .contact__item-label {
+    padding-top: 8px;
   }
 
   .contact__item {
@@ -107,5 +114,13 @@
   .contact__item-label {
     padding-left: 0;
     padding-right: 16px;
+  }
+
+  .contact__item-label2 {
+    display: none;
+  }
+
+  .contact__item-input {
+    width: 316px;
   }
 }

@@ -1,0 +1,76 @@
+// декоративная линия слева/справа от элемента
+$line-tablet-width: 125px;
+$line-desktop-width: 280px;
+$line-contact-top: 35px;
+$line-visited-top: 40px;
+$line-emotions-top: 35px;
+
+//.line {}
+
+@media (min-width: $tablet-width) {
+  .line {
+    &--contact {
+      &::before {
+        @include draw-line-left($t:30px, $l:0, $w:$line-tablet-width);
+      }
+
+      &::after {
+        @include draw-line-right($t:30px, $r:0, $w:$line-tablet-width);
+      }
+    }
+
+    &--visited {
+      &::before {
+        @include draw-line-left($t:55px, $l:0, $w:$line-tablet-width);
+      }
+
+      &::after {
+        @include draw-line-right($t:55px, $r:0, $w:$line-tablet-width);
+      }
+    }
+
+    &--emotions {
+      &::before {
+        @include draw-line-left($t:28px, $l:0, $w:$line-tablet-width);
+      }
+
+      &::after {
+        @include draw-line-right($t:28px, $r:0, $w:$line-tablet-width);
+      }
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .line {
+    &--contact {
+      &::before {
+        @include draw-line-left($t:28px, $l:0, $w:$line-desktop-width);
+      }
+
+      &::after {
+        @include draw-line-right($t:28px, $r:0, $w:$line-desktop-width);
+      }
+    }
+
+    &--visited {
+      &::before {
+        @include draw-line-left($t:55px, $l:0, $w:$line-desktop-width);
+      }
+
+      &::after {
+        @include draw-line-right($t:55px, $r:0, $w:$line-desktop-width);
+      }
+    }
+
+    &--emotions {
+      &::before {
+        @include draw-line-left($t:60px, $l:0, $w:$line-desktop-width);
+      }
+
+      &::after {
+        @include draw-line-right($t:60px, $r:0, $w:$line-desktop-width);
+      }
+    }
+  }
+}

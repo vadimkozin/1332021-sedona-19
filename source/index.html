@@ -7,22 +7,22 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header class="page-header">
-      <a href="" class="page-header__logo">
-        <img class="page-header__logo-image" src="./img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип городка Седона">
-      </a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
-        <div class="main-nav__wrapper">
-          <ul class="main-nav__list menu">
-            <li class="menu__item menu__item--active"><a>Главная</a></li>
-            <li class="menu__item"><a href="photo.html">Фото и видео</a></li>
-            <li class="menu__item"><a href="form.html">Форма отзыва</a></li>
-            <li class="menu__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
-          </ul>
-        </div>
-      </nav>
-    </header>
+<header class="page-header">
+  <a class="page-header__logo">
+    <img class="page-header__logo-image" src="./img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип городка Седона">
+  </a>
+  <nav class="main-nav main-nav--closed main-nav--nojs">
+    <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+    <div class="main-nav__wrapper">
+      <ul class="main-nav__list menu">
+        <li class="menu__item menu__item--active"><a>Главная</a></li>
+        <li class="menu__item"><a href="photo.html">Фото и видео</a></li>
+        <li class="menu__item"><a href="form.html">Форма отзыва</a></li>
+        <li class="menu__item"><a href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
 
     <main class="page-main">
       <h1 class="visually-hidden">Выбор отеля в Седоне</h1>
@@ -36,61 +36,65 @@
 
       <section class="slogan">
         <h2 class="visually-hidden">Призыв посетить Седону</h2>
-        <div class="slogan__content">
-          <strong class="slogan__title">Седона &ndash; небольшой городок в Аризоне, заслуживающий большего!</strong>
-          <p class="slogan__five-reasons">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+        <div class="slogan__wrap">
+          <strong class="slogan__title">Седона &nbsp;&ndash;&nbsp;  небольшой городок в Аризоне, заслуживающий большего!</strong>
+          <p class="slogan__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
       </section>
 
       <section class="landmark landmark--city">
-        <div class="landmark__content landmark__content--city">
-          <h2 class="landmark__title">Настоящий городок</h2>
-          <p class="landmark__number">&ndash; №1 &ndash;</p>
-          <p class="landmark__text">Седона не аттракцион для туристов, там течёт своя жизнь</p>
+        <div class="landmark__info landmark__info--city">
+          <div class="landmark__wrap">
+            <h2 class="landmark__title">Настоящий городок</h2>
+            <p class="landmark__number">&ndash; №1 &ndash;</p>
+            <p class="landmark__text">Седона не аттракцион для туристов, там течёт своя жизнь</p>
+          </div>
         </div>
         <div class="landmark__picture landmark__picture--city">
           <img class="landmark__image" src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="Фотография городка Седона">
         </div>
       </section>
 
-      <section class="advantage-living container">
+      <section class="advantage-living">
         <h2 class="visually-hidden">Преимущества по проживанию</h2>
         <ul class="advantage-living__list living">
-          <li class="living__item">
+          <li class="living__item living__item--house">
             <div class="living__photo living__photo--house">
               <img class="living__image" src="./img/icon-house.svg" width="37" height="36" alt="Иконка жилья">
             </div>
-            <div class="living__content">
+            <div class="living__wrap">
               <h3 class="living__title">Жильё</h3>
               <p class="living__text">Рекомендуем пожить в настоящем мотеле, всё как в кино!</p>
             </div>
           </li>
-          <li class="living__item">
+          <li class="living__item living__item--souvenirs">
             <div class="living__photo living__photo--souvenirs">
               <img class="living__image" src="./img/icon-gift.svg" width="32" height="38" alt="Иконка сувениров">
             </div>
-            <div class="living__content">
+            <div class="living__wrap">
               <h3 class="living__title">Сувениры</h3>
-              <p class="living__text">Не только китайского, но и местного производства!</p>
+              <p class="living__text">Не только китайского,<br> но и местного производства!</p>
             </div>
           </li>
-          <li class="living__item">
+          <li class="living__item living__item--food">
             <div class="living__photo living__photo--food">
               <img class="living__image" src="./img/icon-burger.svg" width="40" height="35" alt="Иконка еды">
             </div>
-            <div class="living__content">
+            <div class="living__wrap">
               <h3 class="living__title">Еда</h3>
-              <p class="living__text">Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
+              <p class="living__text">Всегда заказывайте фирменный бургер,<br> вы не разочаруетесь!</p>
             </div>
           </li>
         </ul>
       </section>
 
       <section class="landmark landmark--bridge">
-        <div class="landmark__content landmark__content--bridge">
-          <h2 class="landmark__title">Там есть мост дъявола</h2>
-          <p class="landmark__number">&ndash; №2 &ndash;</p>
-          <p class="landmark__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+        <div class="landmark__info landmark__info--bridge">
+          <div class="landmark__wrap">
+            <h2 class="landmark__title">Там есть<br> мост дъявола</h2>
+            <p class="landmark__number">&ndash; №2 &ndash;</p>
+            <p class="landmark__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+          </div>
         </div>
         <div class="landmark__picture landmark__picture--bridge">
           <img class="landmark__image" src="img/main-bridge-mobile@1x.jpg" width="320" height="260" alt="Мост дъявола в Седоне">
@@ -101,27 +105,33 @@
         <h2 class="visually-hidden">Преимущества по местоположению</h2>
         <ul class="advantage-location__list location">
           <li class="location__item">
-            <h3 class="location__title">Небольшая площадь</h3>
-            <p class="location__number">&ndash; №3 &ndash;</p>
-            <p class="location__text">Все достопримечательности находятся очень близко</p>
+            <div class="location__wrap">
+              <h3 class="location__title">Небольшая площадь</h3>
+              <p class="location__number">&ndash; №3 &ndash;</p>
+              <p class="location__text">Все интересные места находятся очень близко</p>
+            </div>
           </li>
           <li class="location__item">
-            <h3 class="location__title">Красивая дорога</h3>
-            <p class="location__number">&ndash; №4 &ndash;</p>
-            <p class="location__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <div class="location__wrap">
+              <h3 class="location__title">Красивая дорога</h3>
+              <p class="location__number">&ndash; №4 &ndash;</p>
+              <p class="location__text">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            </div>
           </li>
           <li class="location__item">
-            <h3 class="location__title">Мало туристов</h3>
-            <p class="location__number">&ndash; №5 &ndash;</p>
-            <p class="location__text">Большинство едет в гранд каньон и толпится там</p>
+            <div class="location__wrap">
+              <h3 class="location__title">Мало туристов</h3>
+              <p class="location__number">&ndash; №5 &ndash;</p>
+              <p class="location__text">Большинство едет в гранд каньон и толпится там</p>
+            </div>
           </li>
         </ul>
       </section>
 
       <section class="invitation">
         <h2 class="visually-hidden">Приглашаем посетить Седону</h2>
-        <div class="invitation__content">
-          <strong class="invitation__question">Заинтересовались?</strong>
+        <div class="invitation__wrap">
+          <strong class="invitation__title">Заинтересовались?</strong>
           <p class="invitation__text">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
         </div>
         <a class="invitation__button" href="search-hotel.html" onclick="alert('Opening the hotel search page');">Найти гостиницу</a>
@@ -178,6 +188,6 @@
         </div>
       </div>
     </footer>
-
+    <script src="./js/app.js"></script>
   </body>
 </html>
