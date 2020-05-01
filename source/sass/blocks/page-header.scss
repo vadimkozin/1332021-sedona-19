@@ -38,7 +38,9 @@
   }
 
   .page-header__logo-image {
-    @include replace-image($bi:url("../../img/logo-sedona-tablet.svg"), $w:102px, $h:83px);
+    // @include replace-image($bi:url("../../img/logo-sedona-tablet.svg"), $w:102px, $h:83px);
+    width: 102px;
+    height: 83px;
     z-index: 1;
   }
 }
@@ -49,6 +51,8 @@
   }
 
   .page-header__logo-image {
-    @include replace-image($bi:url("../../img/logo-sedona-desktop.svg"), $w:188px, $h:96px);
+    // @include replace-image($bi:url("../../img/logo-sedona-desktop.svg"), $w:188px, $h:96px);
+    width: 188px;
+    height: 96px;
   }
 }
