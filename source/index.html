@@ -9,7 +9,11 @@
   <body>
 <header class="page-header">
   <a class="page-header__logo">
-    <img class="page-header__logo-image" src="./img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип городка Седона">
+    <picture>
+      <source media="(min-width:1200px)" srcset="./img/logo-sedona-desktop.svg 188w">
+      <source media="(min-width:768px)" srcset="./img/logo-sedona-tablet.svg 102w">
+      <img class="page-header__logo-image" src="./img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип городка Седона">
+    </picture>
   </a>
   <nav class="main-nav main-nav--closed main-nav--nojs">
     <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -43,15 +47,27 @@
       </section>
 
       <section class="landmark landmark--city">
-        <div class="landmark__info landmark__info--city">
+        <div class="landmark__info">
           <div class="landmark__wrap">
             <h2 class="landmark__title">Настоящий городок</h2>
             <p class="landmark__number">&ndash; №1 &ndash;</p>
             <p class="landmark__text">Седона не аттракцион для туристов, там течёт своя жизнь</p>
           </div>
         </div>
-        <div class="landmark__picture landmark__picture--city">
-          <img class="landmark__image" src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="Фотография городка Седона">
+        <div class="landmark__picture">
+          <picture>
+            <source
+              media="(min-width: 1200px)"
+              srcset="img/main-city-desktop@1x.jpg 1x,
+                      img/main-city-desktop@2x.jpg 2x">
+            <source
+              media="(min-width: 768px)"
+              srcset="img/main-city-tablet@1x.jpg 1x,
+                      img/main-city-tablet@2x.jpg 2x">
+            <img class="landmark__image"
+              src="img/main-city-mobile@1x.jpg"
+              srcset="img/main-city-mobile@2x.jpg 2x" width="320" height="260" alt="Фотография городка Седона">
+          </picture>
         </div>
       </section>
 
@@ -89,15 +105,27 @@
       </section>
 
       <section class="landmark landmark--bridge">
-        <div class="landmark__info landmark__info--bridge">
+        <div class="landmark__info">
           <div class="landmark__wrap">
             <h2 class="landmark__title">Там есть<br> мост дъявола</h2>
             <p class="landmark__number">&ndash; №2 &ndash;</p>
             <p class="landmark__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
           </div>
         </div>
-        <div class="landmark__picture landmark__picture--bridge">
-          <img class="landmark__image" src="img/main-bridge-mobile@1x.jpg" width="320" height="260" alt="Мост дъявола в Седоне">
+        <div class="landmark__picture">
+          <picture>
+            <source
+              media="(min-width: 1200px)"
+              srcset="img/main-bridge-desktop@1x.jpg 1x,
+                      img/main-bridge-desktop@2x.jpg 2x">
+            <source
+              media="(min-width: 768px)"
+              srcset="img/main-bridge-tablet@1x.jpg 1x,
+                      img/main-bridge-tablet@2x.jpg 2x">
+            <img class="landmark__image"
+              src="img/main-bridge-mobile@1x.jpg"
+              srcset="img/main-bridge-mobile@2x.jpg 2x" width="320" height="260" alt="Мост дъявола в Седоне">
+          </picture>
         </div>
       </section>
 
@@ -146,6 +174,7 @@
         </noscript>
         <iframe class="map__interactive" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1973979.2506306162!2d-112.99689112967489!3d34.8085026977851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872dbe91db5abf7b%3A0x6b38c28b698d0d4a!2sCoconino%20National%20Forest!5e0!3m2!1sru!2sru!4v1585496367469!5m2!1sru!2sru" width="100%" height="350" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
       </section>
+
     </main>
 
     <footer class="page-footer">

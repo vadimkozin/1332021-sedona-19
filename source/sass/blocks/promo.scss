@@ -28,6 +28,14 @@
   }
 }
 
+@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+  .promo {
+    background-image:
+      url("../../img/bg-intro-triangle-mobile.svg"),
+      url("../../img/bg-back-mobile@2x.jpg");
+  }
+}
+
 .promo__picture {
   width: 281px;
   height: 214px;
@@ -53,6 +61,7 @@
     background-image:
       url("../../img/bg-intro-triangle-tablet.svg"),
       url("../../img/bg-back-tablet@1x.jpg");
+
     background-position:
       bottom 0 left 0,
       center;
@@ -71,6 +80,14 @@
       background-size:
         768px 57px,
         cover;
+    }
+  }
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .promo {
+      background-image:
+        url("../../img/bg-intro-triangle-tablet.svg"),
+        url("../../img/bg-back-tablet@2x.jpg");
     }
   }
 
@@ -113,10 +130,18 @@
     }
   }
 
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    .promo {
+      background-image:
+        url("../../img/bg-intro-triangle-desktop.svg"),
+        url("../../img/bg-back-desktop@2x.jpg");
+    }
+  }
+
   .promo__picture {
     &--small {
       padding-top: 102px;
     }
   }
-
 }
+

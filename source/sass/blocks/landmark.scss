@@ -16,15 +16,15 @@
 }
 
 .landmark__info {
-  &--city {
-    padding: 43px 28px 30px;
-  }
-
-  &--bridge {
-    padding: 25px 30px 30px;
-  }
-
   text-align: center;
+}
+
+.landmark--city .landmark__info {
+  padding: 43px 28px 30px;
+}
+
+.landmark--bridge .landmark__info {
+  padding: 25px 30px 30px;
 }
 
 .landmark__title {
@@ -53,23 +53,28 @@
   margin-top: -2px;
 }
 
+.landmark__image {
+  display: block;
+}
+
 @media (min-width: $tablet-width) {
   .landmark {
     flex-direction: row;
+    min-height: 256px;
 
     background-image: none;
   }
 
   .landmark__info {
     width: 256px;
-    margin-top: 46px;
-    margin-left: 47px;
-    margin-right: 47px;
+  }
 
-    &--city,
-    &--bridge {
-      padding: 0;
-    }
+  .landmark--city .landmark__info {
+    padding: 46px 47px 44px;
+  }
+
+  .landmark--bridge .landmark__info {
+    padding: 46px 47px;
   }
 
   .landmark__wrap {
@@ -85,7 +90,14 @@
 
     & .landmark__text {
       margin-top: 20px;
+      // padding-left: 10px;
+      // padding-right: 10px;
     }
+  }
+
+  .landmark--bridge .landmark__text {
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .landmark__title {
@@ -97,62 +109,62 @@
     }
   }
 
-  .landmark__info--bridge .landmark__title {
+  .landmark--bridge .landmark__title {
     margin-top: -3px;
   }
 
-  .landmark__picture {
-    &--city {
-      background-image: url("../../img/main-city-tablet@1x.jpg");
-    }
+  .landmark--bridge .landmark__picture {
+    order: -1;
+  }
 
-    &--bridge {
-      background-image: url("../../img/main-bridge-tablet@1x.jpg");
-      order: -1;
-    }
-    margin-top: 0;
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: 512px 256px;
-    width: 0; // обнуляем ширину
-    height: 256px; // высота нового изображения
-    padding-left: 512px; // размер отступа равен ширине нового изображения
+  .landmark__picture {
+    width: 512px;
+    height: 256px;
+  }
+
+  .landmark__image {
+    width: 512px;
+    height: 256px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .landmark__info {
     width: 400px;
-    margin-top: 46px;
-    margin-left: 67px;
-    margin-right: 67px;
+    padding-top: 46px;
+    padding-left: 67px;
+    padding-right: 67px;
+  }
 
-    &--bridge {
-      margin-left: 90px;
-      margin-right: 90px;
-    }
+  .landmark--city .landmark__info {
+    padding: 46px 55px 44px;
+  }
+
+  .landmark--bridge .landmark__info {
+    padding-left: 90px;
+    padding-right: 90px;
   }
 
   .landmark__wrap .landmark__title {
-    margin-top: 7px;
-    margin-left: 30px;
-    margin-right: 30px;
+    padding-top: 7px;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+
+  .landmark--bridge .landmark__wrap .landmark__title {
+    padding-top: 11px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   .landmark__picture {
-    &--city {
-      background-image: url("../../img/main-city-desktop@1x.jpg");
-    }
+    width: 800px;
+    height: 256px;
+  }
 
-    &--bridge {
-      background-image: url("../../img/main-bridge-desktop@1x.jpg");
-    }
-
-    background-position: top -73px left 0;
-    background-repeat: no-repeat;
-    background-size: cover; // 800px 256px
-    width: 0; // обнуляем ширину
-    height: 256px; // высота нового изображения
-    padding-left: 800px; // размер отступа равен ширине нового изображения
+  .landmark__image {
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
   }
 }
