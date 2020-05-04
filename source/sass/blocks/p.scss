@@ -88,11 +88,6 @@ $height-about: 80px;
     width: 23px;
     height: 21px;
 
-    background-image: url("../../img/icon-like.svg");
-    background-repeat: no-repeat;
-    background-size: 23px 21px;
-    background-position: 0 0;
-
     opacity: 0.3;
   }
 
@@ -176,6 +171,7 @@ $height-about: 80px;
 
     &-like {
       opacity: 1;
+      fill: #ffffff;
     }
   }
 }

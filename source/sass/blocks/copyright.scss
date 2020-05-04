@@ -19,11 +19,11 @@
 
   padding-left: 10px;
 
-  &:hover path {
+  &:hover svg {
     fill: #81b3d2;
   }
 
-  &:active path {
+  &:active svg {
     fill: #000000;
     opacity: 0.3;
   }

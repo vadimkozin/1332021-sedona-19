@@ -13,12 +13,12 @@
 
   margin-bottom: 0;
 
-  &:last-of-type .contact__item-label {
+  &:last-of-type .contact__label {
     margin-top: 10px;
   }
 }
 
-.contact__item-label {
+.contact__label {
   padding-left: 22px;
   padding-bottom: 8px;
 
@@ -26,9 +26,19 @@
   color: $color-grey;
 }
 
-.contact__item-input {
+.contact__wrap {
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+
+  height: 58px;
+}
+
+.contact__input {
+  height: 100%;
   width: 100%;
-  padding: 16px 82px 16px 22px;
+  padding: 16px 78px 16px 22px;
 
   @include set-font($fz:18px, $lh:26px);
 
@@ -40,48 +50,33 @@
   }
 }
 
+.contact__icon-wrap {
+  position: absolute;
+  top: 1px;
+  right: 1px;
+
+  width: 58px;
+  min-width: 58px;
+  height: 97%;
+  z-index: 1;
+
+  background-color: #e6e6e6;
+}
+
 .contact__icon {
-  position: relative;
-
-  &::before {
-    position: absolute;
-    content: "";
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-
-    width: 58px;
-    height: 95%;
-
-    background-color: #e6e6e6;
-  }
-
-  &-phone::before,
-  &-email::before {
-    background-repeat: no-repeat;
-    background-position: top 50% right 50%;
-    background-size: 18px 18px;
-  }
-
-  &-phone {
-    &::before {
-      background-image: url("../../img/icon-phone.svg");
-    }
-  }
-
-  &-email {
-    &::before {
-      background-image: url("../../img/icon-mail.svg");
-    }
-  }
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 @media (min-width: $tablet-width) {
-  .contact__item:first-of-type .contact__item-label {
+  .contact__item:first-of-type .contact__label {
     padding-top: 3px;
   }
 
-  .contact__item:last-of-type .contact__item-label {
+  .contact__item:last-of-type .contact__label {
     padding-top: 11px;
   }
 }
@@ -97,11 +92,11 @@
     justify-content: space-between;
   }
 
-  .contact__item:first-of-type .contact__item-label {
+  .contact__item:first-of-type .contact__label {
     padding-top: 17px;
   }
 
-  .contact__item:last-of-type .contact__item-label {
+  .contact__item:last-of-type .contact__label {
     padding-top: 8px;
   }
 
@@ -111,16 +106,16 @@
     margin-bottom: 0;
   }
 
-  .contact__item-label {
+  .contact__label {
     padding-left: 0;
     padding-right: 16px;
   }
 
-  .contact__item-label2 {
+  .contact__label2 {
     display: none;
   }
 
-  .contact__item-input {
+  .contact__input {
     width: 316px;
   }
 }
