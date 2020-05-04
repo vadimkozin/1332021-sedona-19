@@ -31,12 +31,12 @@
       background-color: $bg-btn-down;
     }
 
-    &:active path {
+    &:active svg {
       opacity: 0.3;
     }
   }
 
-  & path {
+  & svg {
     fill: $primary-text-color;
   }
 }

@@ -85,24 +85,17 @@
     margin-right: 23px;
   }
 
-  & path,
-  & polygon {
-    fill: $mobile-btn-fresh-color;
+  &:hover .panel__icon {
+    fill: $mobile-btn-hover-color;
   }
 
-  &:hover {
-    & path,
-    & polygon {
-      fill: $mobile-btn-hover-color;
-    }
+  &:active .panel__icon {
+    fill: $mobile-btn-down-color;
   }
+}
 
-  &:active {
-    & path,
-    & polygon {
-      fill: $mobile-btn-down-color;
-    }
-  }
+.panel__icon {
+  fill: $mobile-btn-fresh-color;
 }
 
 @media (min-width: $tablet-width) {
@@ -148,26 +141,20 @@
       margin-right: 41px;
     }
 
-    & path,
-    & polygon {
-      fill: $tablet-btn-fresh-color;
+    &:hover .panel__icon {
+      fill: $tablet-btn-hover-color;
     }
 
-    &:hover {
-      & path,
-      & polygon {
-        fill: $tablet-btn-hover-color;
-      }
-    }
-
-    &:active {
-      & path,
-      & polygon {
-        fill: $tablet-btn-down-color;
-      }
+    &:active .panel__icon {
+      fill: $tablet-btn-down-color;
     }
   }
+
+  .panel__icon {
+    fill: $tablet-btn-fresh-color;
+  }
 }
+
 
 @media (min-width: $desktop-width) {
   .panel {
