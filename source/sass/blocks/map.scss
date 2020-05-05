@@ -11,7 +11,9 @@
     width: 27px;
     height: 27px;
 
-    background-image: url("../../img/icon-map-marker.svg");
+    background-image: url("../../img/icon-map-marker.svg");   // работает
+    background-image: url("../../img/sprite.svg#icon-map-marker"); // не ругается, но и не показывает
+
     background-repeat: no-repeat;
     background-size: 27px 27px;
     background-position: 0 0;
