@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
 
-  height: 58px;
+  min-height: 58px;
   margin-bottom: 20px;
 
   &:nth-last-of-type(1) {
@@ -13,14 +13,16 @@
   }
 
   &-label {
-    padding: 18px 15px 19px 0;
+    padding: 18px 13px 14px 0;
 
     @include set-font($fz:14px, $lh:26px, $fw:normal);
     color: $color-grey;
   }
 
   &-input {
+    height: 58px;
     min-width: 192px;
+    width: 192px;
     flex-grow: 1;
 
     padding: 16px 22px;
@@ -37,6 +39,7 @@
 
   &:first-of-type &-input {
     min-width: 230px;
+    width: 230px;
   }
 }
 
@@ -58,6 +61,7 @@
 
     &:first-of-type &-input {
       min-width: 216px;
+      width: 216px;
     }
   }
 }
@@ -79,4 +83,3 @@
     }
   }
 }
-

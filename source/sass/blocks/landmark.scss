@@ -20,11 +20,11 @@
 }
 
 .landmark--city .landmark__info {
-  padding: 43px 28px 30px;
+  padding: 43px 28px 25px;
 }
 
 .landmark--bridge .landmark__info {
-  padding: 25px 30px 30px;
+  padding: 25px 30px 27px;
 }
 
 .landmark__title {
@@ -48,10 +48,7 @@
   line-height: 21px;
 }
 
-.landmark__picture {
-  line-height: 0;
-  margin-top: -2px;
-}
+// .landmark__picture {}
 
 .landmark__image {
   display: block;
@@ -70,7 +67,7 @@
   }
 
   .landmark--city .landmark__info {
-    padding: 46px 47px 44px;
+    padding: 46px 45px 44px;
   }
 
   .landmark--bridge .landmark__info {

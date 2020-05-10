@@ -52,6 +52,8 @@
   border: none;
   border-radius: 50%;
   background-color: #ffffff;
+
+  cursor: pointer;
 }
 
 .panel__buttons {
@@ -96,6 +98,7 @@
 
 .panel__icon {
   fill: $mobile-btn-fresh-color;
+  cursor: pointer;
 }
 
 @media (min-width: $tablet-width) {

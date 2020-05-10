@@ -14,7 +14,7 @@ function init() {
       navMain.classList.add('main-nav--closed');
       navMain.classList.remove('main-nav--opened');
     }
-  });
+  }, false);
 }
-
+//
 window.addEventListener("load", init, false);

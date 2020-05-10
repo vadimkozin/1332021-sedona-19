@@ -10,11 +10,15 @@
   @include reset-list();
 }
 
+.main-nav__toggle {
+  cursor: pointer;
+  z-index: 1;
+}
+
 .main-nav--closed .main-nav__toggle {
   @media (max-width: $mobile-width-only) {
     @include insert-image($t:16px, $r:19px, $w:23px, $h:22px, $bi:url("../../img/icon-menu.svg"));
   }
-  cursor: pointer;
 }
 
 .main-nav--opened .main-nav__toggle {

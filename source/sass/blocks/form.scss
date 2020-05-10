@@ -45,6 +45,8 @@
 
 .form__button {
   @include button($pt:16px, $ph:47px);
+
+  cursor: pointer;
 }
 
 .form__footnote {
@@ -55,13 +57,18 @@
   }
 }
 
+.form input[type="radio"]:focus + label,
+.form input[type="checkbox"]:focus + label {
+  @include outline();
+}
+
 @media (min-width: $tablet-width) {
   .form {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
 
-    padding-bottom: 62px;
+    padding-bottom: 61px;
   }
 
   .form__legend {
@@ -78,7 +85,6 @@
     &--person {
       order: 3;
       flex-basis: 266px;
-      //outline: 1px dotted green;
     }
 
     &--contact {
@@ -121,22 +127,32 @@
   }
 
   .form__button {
-    @include button($pt:16px, $ph:64px) {
+    width: 324px;
+
+    @include button($pt:16px, $ph:60px) {
       padding-right: 77px;
     }
   }
 
   .form__footnote {
     display: block;
+    width: 40%;
+    text-align: end;
   }
 }
 
 @media (min-width: $desktop-width) {
   .form {
-    padding-bottom: 67px;
+    padding-bottom: 90px;
+  }
+
+  .form__item--person {
+    flex-basis: 400px;
   }
 
   .form__button {
-    @include button($pt:16px, $ph:148px);
+    width: 480px;
+
+    @include button($pt:16px, $ph:145px);
   }
 }

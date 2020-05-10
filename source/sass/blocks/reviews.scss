@@ -1,6 +1,4 @@
-// .reviews {
-//   outline: 1px dotted red;
-// }
+// .reviews {outline: 1px dotted red;}
 
 .rewiews__info {
   padding-top: 22px;
@@ -19,13 +17,13 @@
 }
 
 .reviews__form {
-  padding-bottom: 30px;
+  padding-bottom: 37px;
 }
 
 @media (min-width: $tablet-width) {
   .rewiews__info {
-    margin-left: 104px;
-    margin-right: 104px;
+    margin-left: 102px;
+    margin-right: 102px;
     padding-top: 50px;
     padding-right: 3px;
   }
@@ -43,8 +41,8 @@
 
 @media (min-width: $desktop-width) {
   .rewiews__info {
-    margin-left: 260px;
-    margin-right: 260px;
+    margin-left: 258px;
+    margin-right: 258px;
     padding-top: 87px;
     padding-right: 3px;
   }

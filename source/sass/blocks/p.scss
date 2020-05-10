@@ -23,6 +23,7 @@ $height-about: 80px;
     left: 0;
 
     width: calc(100% + #{$gap-mobile-x2});
+
     transform: translateX(-$gap-mobile);
 
     border-top: 1px solid $divider-color;
@@ -31,11 +32,11 @@ $height-about: 80px;
   &:last-of-type::after {
     position: absolute;
     content: "";
-    top: 0;
+    bottom: 0;
     left: 0;
 
     width: calc(100% + #{$gap-mobile-x2});
-    height: 100%;
+
     transform: translateX(-$gap-mobile);
 
     border-bottom: 1px solid  $divider-color;
@@ -152,6 +153,7 @@ $height-about: 80px;
     position: relative;
     margin-top: -$height-about;
     background-color: rgba(0, 0, 0, 0.3);
+    pointer-events: none;
   }
 
   .p__item:nth-of-type(3n) .p__about {
