@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML Academy: Седона</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <script>
       document.createElement( "picture" );
     </script>
@@ -51,7 +51,25 @@
           </p>
         </div>
 
-        <form class="reviews__form form" action="https://echo.htmlacademy.ru">
+        <form class="reviews__form form" action="https://echo.htmlacademy.ru" method="post">
+          <div class="form__item form__item--impression impression">
+            <h2 class="form__legend impression__title">Ваше общее впечатление:</h2>
+            <div class="impression__block">
+              <div class="impression__item">
+                <input class="impression__input visually-hidden" name="impression" id="id-impr1" type="radio" value="plus" checked>
+                <label class="impression__label" for="id-impr1">Скорее положительное</label>
+              </div>
+              <div class="impression__item">
+                <input class="impression__input visually-hidden" name="impression" id="id-impr2" type="radio" value="minus">
+                <label class="impression__label" for="id-impr2">Скорее отрицательное</label>
+              </div>
+              <div class="impression__item">
+                <input class="impression__input visually-hidden" name="impression" id="id-impr3" type="radio" value="plus-minus">
+                <label class="impression__label" for="id-impr3">Затрудняюсь ответить</label>
+              </div>
+            </div>
+          </div>
+
           <div class="form__item form__item--person person">
             <h2 class="form__legend person__title">Представьтесь:</h2>
             <div class="person__block">
@@ -96,24 +114,6 @@
             </div>
           </div>
 
-          <div class="form__item form__item--impression impression">
-            <h2 class="form__legend impression__title">Ваше общее впечатление:</h2>
-            <div class="impression__block">
-              <div class="impression__item">
-                <input class="impression__input visually-hidden" name="impression" id="id-impr1" type="radio" value="plus" checked>
-                <label class="impression__label" for="id-impr1">Скорее положительное</label>
-              </div>
-              <div class="impression__item">
-                <input class="impression__input visually-hidden" name="impression" id="id-impr2" type="radio" value="minus">
-                <label class="impression__label" for="id-impr2">Скорее отрицательное</label>
-              </div>
-              <div class="impression__item">
-                <input class="impression__input visually-hidden" name="impression" id="id-impr3" type="radio" value="plus-minus">
-                <label class="impression__label" for="id-impr3">Затрудняюсь ответить</label>
-              </div>
-            </div>
-          </div>
-
           <div class="form__item form__item--visited visited">
             <h2 class="form__legend visited__title line line--visited">Посещенные достопримечательности:</h2>
 
@@ -144,7 +144,6 @@
             <h2 class="form__legend emotions__title line line--emotions">Опишите свои эмоции:</h2>
             <textarea class="emotions__text" name="emotions" cols="40" rows="8" maxlength="1000" placeholder="Опишите подробно все свои восторги"></textarea>
           </div>
-
           <div class="form__button-wrap">
             <button class="form__button">Отправить отзыв</button>
             <p class="form__footnote">* &nbsp;&ndash;&nbsp; обязательные поля</p>
@@ -214,7 +213,6 @@
     </section>
     <br> <!-- временно чтобы было видно карточку -->
 
-    <script src="./js/app.js"></script>
-    <script src="./js/focus.js"></script>
+    <script src="./js/app.min.js"></script>
   </body>
 </html>

@@ -22,12 +22,26 @@
     border-top: 1px solid $divider-color;
   }
 
+  &--person {
+    order: 1;
+  }
+
+  &--contact {
+    order: 2;
+  }
+
   &--impression {
     margin-bottom: 5px;
+    order: 3;
   }
 
   &--visited {
     padding-bottom: 0;
+    order: 4;
+  }
+
+  &--emotions {
+    order: 5;
   }
 }
 
@@ -41,6 +55,7 @@
 
 .form__button-wrap {
   margin-top: 20px;
+  order: 7;
 }
 
 .form__button {
@@ -83,12 +98,12 @@
     }
 
     &--person {
-      order: 3;
+      order: 2;
       flex-basis: 266px;
     }
 
     &--contact {
-      order: 4;
+      order: 3;
     }
 
     &--impression {
@@ -108,11 +123,11 @@
     }
 
     &--visited {
-      order: 5;
+      order: 4;
     }
 
     &--emotions {
-      order: 6;
+      order: 5;
     }
   }
 

@@ -16,6 +16,13 @@
     color: $primary-text-color;
   }
 
+  &--disabled {
+    background-color: #e5e5e5;
+    color: #ffffff;
+    pointer-events: none;
+    cursor: default;
+  }
+
   &:hover {
     background-color: $bg-btn-hover;
   }
@@ -75,6 +82,11 @@
       padding-bottom: 15px;
 
       color: $secondary-text-color;
+    }
+
+    &--disabled a {
+      color: #ffffff;
+      opacity: 0.6;
     }
 
     &:hover {

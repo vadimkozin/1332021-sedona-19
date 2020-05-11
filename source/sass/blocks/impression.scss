@@ -72,10 +72,13 @@
   }
 
   &:not(:checked) + .impression__label:hover {
-    &::before {
+    &::before,
+    &::after {
       background-color: $elem-outer-hover-color;
     }
+  }
 
+  &:not(:checked) + .impression__label:active {
     &::after {
       background-color: $elem-outer-down-color;
     }

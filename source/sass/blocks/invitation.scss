@@ -48,6 +48,8 @@
 
   &--disabled {
     background-color: $bg-btn-disabled;
+    pointer-events: none;
+    cursor: default;
   }
 }
 

@@ -48,6 +48,15 @@
   &::placeholder {
     color: $placeholder-color;
   }
+
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    border: solid 4px #e5e5e5;
+    background-color: #ffffff;
+  }
 }
 
 .contact__icon-wrap {

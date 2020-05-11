@@ -1,6 +1,7 @@
 // "особенности" браузеров
-/* только для IE11 */
+// только для IE11
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .card__button:focus,
   .invitation__button:focus,
   .panel__btn:focus,
   .panel__slider:focus,
@@ -18,9 +19,8 @@
   }
 }
 
-/* только Firefox и Edge */
+// только Firefox и Edge
 @supports (-moz-appearance:none) or (-ms-ime-align:auto) {
-  button:focus,
   .card__button:focus,
   .invitation__button:focus,
   .panel__btn:focus,
@@ -36,5 +36,5 @@
     outline-offset: 1px;
   }
 }
-/* Safari */
+// Safari
 // @supports (-webkit-hyphens:none) {}
