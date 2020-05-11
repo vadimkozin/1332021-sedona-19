@@ -17,6 +17,14 @@ var include = require("posthtml-include");
 var del = require("del");
 var uglify = require('gulp-uglify');
 var pipeline = require('readable-stream').pipeline;
+var htmlmin = require('gulp-htmlmin');
+
+gulp.task("html", function () {
+  return gulp.src("source/*.html")
+    //.pipe(posthtml( [include()] ))
+    .pipe(htmlmin({ collapseWhitespace: true, removeComments: true }))
+    .pipe(gulp.dest("build"));
+});
 
 gulp.task("clean", function () {
   return del("build");
@@ -55,12 +63,6 @@ gulp.task("sprite", function () {
     .pipe(svgstore({inlineSvg: true}))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"));
-});
-
-gulp.task("html", function () {
-  return gulp.src("source/*.html")
-    .pipe(posthtml( [include()] ))
-    .pipe(gulp.dest("build"));
 });
 
 gulp.task("images", function () {
