@@ -7,8 +7,10 @@
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
+    "del": "^5.1.0",
     "gulp": "4.0.x",
     "gulp-csso": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-imagemin": "^7.1.0",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "8.0.x",
@@ -46,7 +48,5 @@
   "engines": {
     "node": "8.16"
   },
-  "dependencies": {
-    "del": "^5.1.0"
-  }
+  "dependencies": {}
 }
