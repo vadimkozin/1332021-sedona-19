@@ -1,12 +1,11 @@
-@charset "UTF-8";
-
-.social {
-  margin-bottom: 30px;
-}
+//.social {// margin-bottom: 19px;}
 
 .social__list {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
+
+  width: $wrapper-mobile-width;
   list-style: none;
   padding: 0;
 }
@@ -20,6 +19,8 @@
     width: 46px;
     height: 48px;
     margin-right: 6px;
+    margin-top: 3px;
+    margin-bottom: 3px;
 
     background-color: $primary-color;
 

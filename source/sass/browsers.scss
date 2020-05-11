@@ -1,0 +1,40 @@
+// "особенности" браузеров
+// только для IE11
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .card__button:focus,
+  .invitation__button:focus,
+  .panel__btn:focus,
+  .panel__slider:focus,
+  .form__button:focus,
+  .social__link:focus,
+  .copyright__link:focus svg,
+  .form input:focus,
+  .form textarea:focus,
+  .form input[type="radio"]:focus + label,
+  .form input[type="checkbox"]:focus + label {
+    // outline: 2px solid #81b3d2;
+    // outline-offset: 1px;
+    outline: none;
+    box-shadow: 0 0 5px 3px #4d90fe;
+  }
+}
+
+// только Firefox и Edge
+@supports (-moz-appearance:none) or (-ms-ime-align:auto) {
+  .card__button:focus,
+  .invitation__button:focus,
+  .panel__btn:focus,
+  .panel__slider:focus,
+  .form__button:focus,
+  .social__link:focus,
+  .copyright__link:focus svg,
+  .form input:focus,
+  .form textarea:focus,
+  .form input[type="radio"]:focus + label,
+  .form input[type="checkbox"]:focus + label {
+    outline: 2px solid #81b3d2;
+    outline-offset: 1px;
+  }
+}
+// Safari
+// @supports (-webkit-hyphens:none) {}

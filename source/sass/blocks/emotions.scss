@@ -20,6 +20,15 @@
     color: $secondary-text-color;
   }
 
+  &:hover {
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    border: solid 4px #e5e5e5;
+    background-color: #ffffff;
+  }
+
   background-color: $elem-outer-fresh-color;
   border: none;
 }

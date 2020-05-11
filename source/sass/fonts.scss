@@ -1,20 +1,19 @@
 //@import url("https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic");
 
 @font-face {
-  font-family: "PT Sans";
-  src: url("../fonts/ptsans.woff2") format("woff2"),
-    url("../fonts/ptsans.woff") format("woff");
   font-weight: 400;
+  font-family: "PT Sans";
   font-style: normal;
   font-display: swap;
+  src: url("../fonts/ptsans.woff2") format("woff2"),
+    url("../fonts/ptsans.woff") format("woff");
 }
 
 @font-face {
-  font-family: "PT Sans";
-  src: url("../fonts/ptsansbold.woff2") format("woff2"),
-    url("../fonts/ptsansbold.woff") format("woff");
   font-weight: 700;
+  font-family: "PT Sans";
   font-style: normal;
   font-display: swap;
+  src: url("../fonts/ptsansbold.woff2") format("woff2"),
+    url("../fonts/ptsansbold.woff") format("woff");
 }
-

@@ -2,6 +2,7 @@
 
 html {
   box-sizing: border-box;
+  background-color: $bg-color;
 }
 
 *,
@@ -11,8 +12,8 @@ html {
 }
 
 body {
-  min-width: 320px;
-  margin: 0;
+  width: 320px;
+  margin: 0 auto;
   padding: 0;
 
   font-family: $font-stack;
@@ -22,8 +23,22 @@ body {
   line-height: 21px;
   color: #000000;
   text-transform: uppercase;
+  overflow-wrap: anywhere;
 
-  background-color: $bg-color;
+  background-color: $bg-main-color;
+  //background-color: orange;
+}
+
+@media (min-width: $tablet-width) {
+  body {
+    width: $tablet-width;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  body {
+    width: $desktop-width;
+  }
 }
 
 img {

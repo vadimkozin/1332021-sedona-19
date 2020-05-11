@@ -5,7 +5,7 @@
 
   background-color: $bg-main-color;
   box-shadow: 0 7px 15px 0 rgba(0, 1, 1, 0.15);
-  outline: 1px dotted $white-snow-color;
+  // outline: 1px dotted $white-snow-color;
 
   &--err {
     padding-bottom: 35px;
@@ -17,8 +17,8 @@
 }
 
 .card__info {
-  padding-left: 56px;
-  padding-right: 56px;
+  padding-left: 55px;
+  padding-right: 55px;
 
   text-align: center;
 }
@@ -33,23 +33,35 @@
 }
 
 .card__botton-wrap {
-  &--err {
-    margin-top: 25px;
-  }
+  margin: 0 auto;
+}
 
-  &--ok {
-    margin-top: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+.card--err .card__botton-wrap {
+  margin-top: 25px;
+}
 
-    background-color: $bg-color;
-  }
+.card--ok .card__botton-wrap {
+  margin-top: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  background-color: $bg-color;
 }
 
 .card__button {
   margin: 0 auto;
 
-  @include button($pt:16px, $ph:76px, $fz:18px, $lh:26px);
+  @include button($pt:16px, $ph:0, $fz:18px, $lh:26px);
+
+  cursor: pointer;
+}
+
+.card--err .card__button {
+  width: 180px;
+}
+
+.card--ok .card__button {
+  width: 280px;
 }
 
 @media (min-width: $tablet-width) {
@@ -65,9 +77,14 @@
     }
   }
 
-  .card__info {
-    padding-left: 61px;
-    padding-right: 61px;
+  .card--err .card__info {
+    padding-left: 59px;
+    padding-right: 59px;
+  }
+
+  .card--ok .card__info {
+    padding-left: 112px;
+    padding-right: 112px;
   }
 
   .card__title {
@@ -78,26 +95,24 @@
     @include set-font($fz:14px, $lh:24px, $fw:normal);
   }
 
-  .card__botton-wrap {
-    &--ok {
-      margin-top: 40px;
-      padding-top: 44px;
-      padding-bottom: 44px;
-    }
+  .card--ok .card__botton-wrap {
+    margin-top: 40px;
+    padding-top: 44px;
+    padding-bottom: 44px;
   }
 
-  .card__button {
-    &--err {
-      margin: 0 auto;
-      padding-left: 122px;
-      padding-right: 122px;
-    }
+  .card--err .card__button {
+    width: 272px;
+    margin: 0 auto;
+    padding-left: 122px;
+    padding-right: 122px;
+  }
 
-    &--ok {
-      margin: 0 auto;
-      padding-left: 154px;
-      padding-right: 154px;
-    }
+  .card--ok .card__button {
+    width: 458px;
+    margin: 0 auto;
+    padding-left: 154px;
+    padding-right: 154px;
   }
 }
 

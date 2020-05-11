@@ -1,4 +1,7 @@
-//.living { outline: 1px dotted red; }
+.living {
+  padding-top: 18px;
+  padding-bottom: 20px;
+}
 
 .living__item {
   min-height: 120px;
@@ -61,6 +64,8 @@
 @media (min-width: $tablet-width) {
   .living {
     display: flex;
+    padding-top: 0;
+    padding-bottom: 0;
   }
 
   .living__item {

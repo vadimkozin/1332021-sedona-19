@@ -22,22 +22,21 @@
 @import "blocks/page-footer.scss";
 @import "blocks/social.scss";
 @import "blocks/copyright.scss";
-//
+// photo-video
 @import "blocks/media.scss";
 @import "blocks/p.scss";
 @import "blocks/video.scss";
 @import "blocks/panel.scss";
-//
+// form
 @import "blocks/reviews.scss";
 @import "blocks/form.scss";
 @import "blocks/person.scss";
 @import "blocks/contact.scss";
-//@import "blocks/row.scss";
-//@import "blocks/legend.scss";
-//@import "blocks/unit.scss";
 @import "blocks/impression.scss";
 @import "blocks/visited.scss";
 @import "blocks/emotions.scss";
-//
+// a little more
 @import "blocks/card.scss";
 @import "blocks/line.scss";
+// browser features
+@import "browsers.scss";

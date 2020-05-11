@@ -61,13 +61,13 @@
 
 // @include replace-image($bi:url("../../img/main-city-tablet@1x.jpg"), $w:512px, $h:256px);
 @mixin replace-image($bi, $w, $h) {
-  background-image: $bi;  // url("../../img/main-city-tablet@1x.jpg");
+  background-image: $bi;
   background-position: 0 0;
   background-repeat: no-repeat;
   background-size: $w $h;   // 512px 256px
-  width: 0; // обнуляем ширину
-  height: $h; // 256px высота нового изображения
-  padding-left: $w; // 512px размер отступа равен ширине нового изображения
+  width: 0;                 // обнуляем ширину
+  height: $h;               // 256px высота нового изображения
+  padding-left: $w;         // 512px размер отступа равен ширине нового изображения
 }
 
 // $values: (w:200px, fz:14px, lh:21px);
@@ -127,3 +127,11 @@
   margin: 0 auto;
 }
 
+/* @include outline(); */
+@mixin outline() {
+  outline-color: rgb(77, 144, 254); // #4D90FE
+  outline-offset: 1px;
+  outline-style: auto;
+  outline-width: 5px;
+  @content;
+}

@@ -38,7 +38,7 @@
     left: 0;
 
     width: 51px;
-    height: 51px; //100%;
+    height: 51px;
 
     border-radius: 5px;
     background-color: $elem-outer-fresh-color;
@@ -55,7 +55,6 @@
     height: 16px;
 
     background-color: transparent;
-    //background-image: url("../../img/icon-tick.svg");
   }
 }
 
@@ -65,7 +64,6 @@
   }
 
   &:checked + .visited__label::after {
-    //background-image: url("../../img/icon-tick.svg");
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23.049' height='16.249' version='1'%3E%3Cpath d='M22.801 1.299L21.75.248a.853.853 0 00-1.203 0L8.693 12.102 2.502 5.911a.853.853 0 00-1.203 0L.248 6.962a.852.852 0 000 1.202l7.837 7.837a.845.845 0 00.608.246c.22.002.44-.079.608-.246l13.5-13.5a.852.852 0 000-1.202z'/%3E%3C/svg%3E");
   }
 
@@ -73,11 +71,12 @@
     &::before {
       background-color: $elem-outer-hover-color;
     }
+  }
 
+  &:not(:checked) + .visited__label:active {
     &::after {
-      background-color: $elem-outer-hover-color;
-      // background-image: url("../../img/icon-tick.svg");
-      // opacity: 0.3;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='23.049' height='16.249' version='1'%3E%3Cpath d='M22.801 1.299L21.75.248a.853.853 0 00-1.203 0L8.693 12.102 2.502 5.911a.853.853 0 00-1.203 0L.248 6.962a.852.852 0 000 1.202l7.837 7.837a.845.845 0 00.608.246c.22.002.44-.079.608-.246l13.5-13.5a.852.852 0 000-1.202z'/%3E%3C/svg%3E");
+      opacity: 0.3;
     }
   }
 
@@ -97,7 +96,6 @@
 
 @media (min-width: $tablet-width) {
   .visited {
-    // outline: 1px dotted blue;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
@@ -111,6 +109,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 
     width: 100%;
     min-height: 88px;

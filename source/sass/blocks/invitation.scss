@@ -1,5 +1,5 @@
 .invitation {
-  margin-bottom: 48px; //40
+  padding-bottom: 48px;
   text-align: center;
 }
 
@@ -48,6 +48,8 @@
 
   &--disabled {
     background-color: $bg-btn-disabled;
+    pointer-events: none;
+    cursor: default;
   }
 }
 
@@ -79,7 +81,8 @@
 
   .invitation__button {
     margin-top: 27px;
-    padding: 17px 136px;
+    padding: 17px 130px;
+    max-width: 458px;
   }
 }
 

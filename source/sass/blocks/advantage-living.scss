@@ -1,12 +1,14 @@
-//.advantage-living { outline: 1px dotted red; }
+.advantage-living {
+  background-color: $bg-main-color;
+}
 
 .advantage-living__list {
   @include reset-list();
 
   width: $wrapper-mobile-width;
   margin: 0 auto;
-  margin-top: 18px;
-  margin-bottom: 20px;
+  // padding-top: 18px;
+  // padding-bottom: 20px;
 }
 
 @media (min-width: $tablet-width) {

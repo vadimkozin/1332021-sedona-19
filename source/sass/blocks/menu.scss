@@ -1,18 +1,10 @@
-@charset "UTF-8";
-
 .menu {
   min-height: 55px;
-  //margin: 0 auto;
 
   @include set-font($fz:18px, $lh:40px, $fw:700, $ta:center);
 
   background-color: $primary-color;
 }
-
-$bg-btn-hover: #669ec0;
-$bg-btn-down: #5496bd;
-$bg-btn-disabled: #e5e5e5;
-$color-btn-down:hsla(0, 0%, 100%, 0.3); //#ffffff, opacity:0.3
 
 .menu__item {
   padding-top: 10px;
@@ -22,6 +14,13 @@ $color-btn-down:hsla(0, 0%, 100%, 0.3); //#ffffff, opacity:0.3
 
   & a {
     color: $primary-text-color;
+  }
+
+  &--disabled {
+    background-color: #e5e5e5;
+    color: #ffffff;
+    pointer-events: none;
+    cursor: default;
   }
 
   &:hover {
@@ -35,6 +34,10 @@ $color-btn-down:hsla(0, 0%, 100%, 0.3); //#ffffff, opacity:0.3
   &:active a {
     color: $color-btn-down;
   }
+}
+
+.menu__item a:active {
+  color: $color-btn-down;
 }
 
 @media (min-width: $tablet-width) {
@@ -53,7 +56,6 @@ $color-btn-down:hsla(0, 0%, 100%, 0.3); //#ffffff, opacity:0.3
   }
 
   .menu__item {
-    //outline: 1px dotted grey;
     width: 153px;
     padding: 0;
     box-shadow: none;
@@ -66,6 +68,14 @@ $color-btn-down:hsla(0, 0%, 100%, 0.3); //#ffffff, opacity:0.3
       margin-right: 156px;
     }
 
+    &:nth-of-type(n + 5) {
+      width: 154px;
+    }
+
+    &:nth-of-type(n + 9) {
+      width: 153px;
+    }
+
     & a {
       display: block;
       padding-top: 15px;
@@ -74,12 +84,17 @@ $color-btn-down:hsla(0, 0%, 100%, 0.3); //#ffffff, opacity:0.3
       color: $secondary-text-color;
     }
 
+    &--disabled a {
+      color: #ffffff;
+      opacity: 0.6;
+    }
+
     &:hover {
       background-color: transparent;
     }
 
     &:hover a {
-      color:#81b3d2;
+      color: #81b3d2;
     }
 
     &:active {
@@ -102,7 +117,12 @@ $color-btn-down:hsla(0, 0%, 100%, 0.3); //#ffffff, opacity:0.3
       color: rgba(118, 99, 87, 0.3);
     }
   }
+
+  .menu__item a:active {
+    color: rgba(118, 99, 87, 0.3);
+  }
 }
+
 
 @media (min-width: $desktop-width) {
   .menu {
@@ -118,6 +138,14 @@ $color-btn-down:hsla(0, 0%, 100%, 0.3); //#ffffff, opacity:0.3
 
     &:nth-of-type(2) {
       margin-right: 244px;
+    }
+
+    &:nth-of-type(n + 5) {
+      width: 241px;
+    }
+
+    &:nth-of-type(n + 9) {
+      width: 239px;
     }
   }
 }
