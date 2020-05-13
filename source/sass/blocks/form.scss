@@ -12,7 +12,7 @@
   padding-bottom: 25px;
   border: none;
 
-  &::before { // block separator
+  &::before {
     position: absolute;
     content: "";
     top: 0;
@@ -111,13 +111,14 @@
       order: 1;
       flex-basis: 50%;
 
+      // separator impression-block and person-block
       &::after {
         position: absolute;
         content: "";
         top: 22px;
         right: 0;
         width: 1px;
-        height: calc(100% - 22px - 44px); // 30px=shift-top; 44px=shift-bottom
+        height: calc(100% - 22px - 44px); // 22px=shift-top; 44px=shift-bottom
         background-color: $divider-color;
       }
     }

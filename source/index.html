@@ -15,13 +15,12 @@
     <script>svg4everybody();</script>
   </head>
   <body>
-
     <header class="page-header">
       <a class="page-header__logo">
         <picture>
-          <source media="(min-width:1200px)" srcset="./img/logo-sedona-desktop.svg 188w">
-          <source media="(min-width:768px)" srcset="./img/logo-sedona-tablet.svg 102w">
-          <img class="page-header__logo-image" src="./img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип городка Седона">
+          <source media="(min-width:1200px)" srcset="img/logo-sedona-desktop.svg 188w">
+          <source media="(min-width:768px)" srcset="img/logo-sedona-tablet.svg 102w">
+          <img class="page-header__logo-image" src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Логотип городка Седона">
         </picture>
       </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
@@ -36,17 +35,14 @@
         </div>
       </nav>
     </header>
-
     <main class="page-main">
       <h1 class="visually-hidden">Выбор отеля в Седоне</h1>
-
       <section class="promo">
         <h2 class="visually-hidden">Добро пожаловать в Седону</h2>
         <div class="promo__picture">
           <img class="promo__image" src="img/text-sedona-index.svg" width="281" height="214" alt="Welcome to the gardeous Sedona">
         </div>
       </section>
-
       <section class="slogan">
         <h2 class="visually-hidden">Призыв посетить Седону</h2>
         <div class="slogan__wrap">
@@ -54,7 +50,6 @@
           <p class="slogan__text">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
         </div>
       </section>
-
       <section class="landmark landmark--city">
         <div class="landmark__info">
           <div class="landmark__wrap">
@@ -74,7 +69,6 @@
           </picture>
         </div>
       </section>
-
       <section class="advantage-living">
         <h2 class="visually-hidden">Преимущества по проживанию</h2>
         <ul class="advantage-living__list living">
@@ -107,7 +101,6 @@
           </li>
         </ul>
       </section>
-
       <section class="landmark landmark--bridge">
         <div class="landmark__info">
           <div class="landmark__wrap">
@@ -127,7 +120,6 @@
           </picture>
         </div>
       </section>
-
       <section class="advantage-location">
         <h2 class="visually-hidden">Преимущества по местоположению</h2>
         <ul class="advantage-location__list location">
@@ -154,7 +146,6 @@
           </li>
         </ul>
       </section>
-
       <section class="invitation">
         <h2 class="visually-hidden">Приглашаем посетить Седону</h2>
         <div class="invitation__wrap">
@@ -163,7 +154,6 @@
         </div>
         <a class="invitation__button" href="search-hotel.html" onclick="alert('Opening the hotel search page');">Найти гостиницу</a>
       </section>
-
       <section class="map">
         <h2 class="visually-hidden">Карта Седоны</h2>
         <noscript>
@@ -181,9 +171,7 @@
         <iframe class="map__interactive map__interactive--nojs" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1973979.2506306162!2d-112.99689112967489!3d34.8085026977851!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872dbe91db5abf7b%3A0x6b38c28b698d0d4a!2sCoconino%20National%20Forest!5e0!3m2!1sru!2sru!4v1585496367469!5m2!1sru!2sru" width="100%" height="350" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
         <svg class="map__marker" width="27" height="27" role="img" aria-label="Маркер на карте"><use xlink:href="img/sprite.svg#icon-map-marker"></use></svg>
       </section>
-
     </main>
-
     <footer class="page-footer">
       <div class="page-footer__wrapper">
         <p class="page-footer__visit">
@@ -216,7 +204,6 @@
         </div>
       </div>
     </footer>
-
     <script>
       document.querySelector('.map__interactive').classList.remove('map__interactive--nojs');
     </script>

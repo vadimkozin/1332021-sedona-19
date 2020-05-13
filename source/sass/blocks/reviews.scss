@@ -1,6 +1,4 @@
-// .reviews {outline: 1px dotted red;}
-
-.rewiews__info {
+.reviews__info {
   padding-top: 22px;
   padding-bottom: 2px;
 }
@@ -21,7 +19,7 @@
 }
 
 @media (min-width: $tablet-width) {
-  .rewiews__info {
+  .reviews__info {
     margin-left: 102px;
     margin-right: 102px;
     padding-top: 50px;
@@ -40,7 +38,7 @@
 }
 
 @media (min-width: $desktop-width) {
-  .rewiews__info {
+  .reviews__info {
     margin-left: 258px;
     margin-right: 258px;
     padding-top: 87px;

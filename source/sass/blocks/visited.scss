@@ -3,8 +3,6 @@
   flex-direction: column;
 }
 
-//.visited__title {}
-
 .visited__block {
   display: flex;
   flex-direction: column;
@@ -85,7 +83,6 @@
   }
 
   &:active + .visited__label::after {
-    //background-color: $elem-inner-down-color;
     opacity: 0.3;
   }
 

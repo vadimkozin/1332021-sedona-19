@@ -1,5 +1,5 @@
 .panel {
-  width: 280px;
+  width: $wrapper-mobile-width;
 }
 
 .panel__opacity {
@@ -38,23 +38,6 @@
   opacity: 0.2;
   background-color: #ffffff;
 }
-
-// .panel__slider {
-//   position: absolute;
-//   top: 50%;
-//   left: 21%;
-//   transform: translateY(-50%);
-
-//   padding: 0;
-//   width: 10px;
-//   height: 10px;
-
-//   border: none;
-//   border-radius: 50%;
-//   background-color: #ffffff;
-
-//   cursor: pointer;
-// }
 
 .panel__buttons {
   transform: translateY(56px);
@@ -116,7 +99,7 @@
 
 @media (min-width: $tablet-width) {
   .panel {
-    width: 648px;
+    width: $wrapper-tablet-width;
   }
 
   .panel__opacity,
@@ -135,10 +118,6 @@
 
     width: 389px;
   }
-
-  // .panel__slider {
-  //   left: 32%;
-  // }
 
   .panel__buttons {
     transform: none;
@@ -186,10 +165,6 @@
   .panel__timeline {
     width: 540px;
   }
-
-  // .panel__slider {
-  //   left: 25.6%;
-  // }
 
   .panel__btn--slider {
     margin-left: 19.2%;

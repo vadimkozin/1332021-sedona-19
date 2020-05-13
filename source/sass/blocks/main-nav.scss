@@ -1,10 +1,8 @@
 .main-nav {
   position: relative;
-  width: 320px;
+  width: $mobile-width;
   margin: 0 auto;
 }
-
-//.main-nav__wrapper {}
 
 .main-nav__list {
   @include reset-list();
@@ -17,13 +15,13 @@
 
 .main-nav--closed .main-nav__toggle {
   @media (max-width: $mobile-width-only) {
-    @include insert-image($t:16px, $r:19px, $w:23px, $h:22px, $bi:url("../../img/icon-menu.svg"));
+    @include insert-image($t:16px, $r:19px, $w:23px, $h:22px, $bi:url("../img/icon-menu.svg"));
   }
 }
 
 .main-nav--opened .main-nav__toggle {
   @media (max-width: $mobile-width-only) {
-    @include insert-image($t:16px, $r:19px, $w:23px, $h:21px, $bi:url("../../img/icon-cross.svg"));
+    @include insert-image($t:16px, $r:19px, $w:23px, $h:21px, $bi:url("../img/icon-cross.svg"));
   }
 }
 

@@ -107,8 +107,6 @@ gulp.task("server", function () {
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
   gulp.watch("source/**/*.js", gulp.series("script-copy", "script", "refresh"));
 
-  // gulp.watch("source/**/*.js").on("change", server.reload);
-
 });
 
 gulp.task("refresh", function (done) {

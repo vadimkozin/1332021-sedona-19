@@ -8,6 +8,7 @@
   @content;
 }
 
+// @include reset-list();
 @mixin reset-list() {
   padding: 0;
   margin: 0;
@@ -21,28 +22,32 @@
   content: "";
   top: $t;
   left: $l;
+
   width: $w;
   height: $h;
+
   background-color: $bg;
   @content;
 }
 
+// include draw-line-right($t:0, $r:10px, $w:100px)
 @mixin draw-line-right($t:0, $r:0, $w:100px, $h:1px, $bg:$divider-color) {
   position: absolute;
   content: "";
   top: $t;
   right: $r;
+
   width: $w;
   height: $h;
+
   background-color: $bg;
   @content;
 }
 
 // @include insert-image($t:16px, $r:16px, $w:23px, $h:22px, $bi:none);
 @mixin insert-image($t:0, $r:0, $w:20px, $h:20px, $bi:none) {
-  content: "";
-
   position: absolute;
+  content: "";
   top: $t;
   right: $r;
 
@@ -59,41 +64,11 @@
   object-fit: contain;
 }
 
-// @include replace-image($bi:url("../../img/main-city-tablet@1x.jpg"), $w:512px, $h:256px);
-@mixin replace-image($bi, $w, $h) {
-  background-image: $bi;
-  background-position: 0 0;
-  background-repeat: no-repeat;
-  background-size: $w $h;   // 512px 256px
-  width: 0;                 // обнуляем ширину
-  height: $h;               // 256px высота нового изображения
-  padding-left: $w;         // 512px размер отступа равен ширине нового изображения
-}
-
-// $values: (w:200px, fz:14px, lh:21px);
-// @include btn($values...) { padding: 18px 40px; border-radius:5px; };
-@mixin btn($w:100px, $fz:21px, $lh:26px, $ff:inherit, $tt:uppercase, $cr:$primary-text-color, $bg:$primary-color) {
-
-  display: block;
-  min-width: $w;
-  padding: 16px 0;
-
-  font-family: $ff;
-  font-size: $fz;
-  line-height: $lh;
-  text-align: center;
-  text-transform: $tt;
-  color: $cr;
-
-  background-color: $bg;
-  @content;
-}
-
 // @include button($pt:17px, $ph:47px);
 @mixin button($pt, $ph, $pb:$pt, $fz:21px, $lh:26px, $ff:inherit, $tt:uppercase, $cr:$primary-text-color, $bg:$primary-color) {
 
   display: block;
-  padding: $pt $ph $pb; // top horizon bottom;
+  padding: $pt $ph $pb; // top horizontal bottom;
 
   font-family: $ff;
   font-size: $fz;
@@ -107,29 +82,9 @@
   @content;
 }
 
-@mixin box-shadow-left-right() {
-  // box-shadow:
-  //   5px 0 5px 0 rgba(0, 1, 1, 0.15),
-  //   -5px 0 5px 0 rgba(0, 1, 1, 0.15);
-
-  // box-shadow:
-  //   2px 0 2px 0 rgba(50, 50, 50, 0.75),
-  //   -2px 0 2px 0 rgba(50, 50, 50, 0.75);
-
-  box-shadow: none;
-}
-
-@mixin min-max($min-width, $max-width, $padding) {
-  min-width: $min-width;
-  max-width: $max-width;
-  padding: 0 $padding;
-  box-sizing: border-box;
-  margin: 0 auto;
-}
-
-/* @include outline(); */
+// @include outline();
 @mixin outline() {
-  outline-color: rgb(77, 144, 254); // #4D90FE
+  outline-color: rgb(77, 144, 254);
   outline-offset: 1px;
   outline-style: auto;
   outline-width: 5px;

@@ -1,6 +1,4 @@
 .landmark {
-  //outline: 1px solid red;
-
   display: flex;
   flex-direction: column;
 
@@ -8,7 +6,7 @@
   background-color: $primary-color;
 
   &--city {
-    background-image: url("../../img/bg-triangle.svg");
+    background-image: url("../img/bg-triangle.svg");
     background-position: 0 -20px;
     background-size: 320px 37px;
     background-repeat: no-repeat;
@@ -48,8 +46,6 @@
   line-height: 21px;
 }
 
-// .landmark__picture {}
-
 .landmark__image {
   display: block;
 }
@@ -87,8 +83,6 @@
 
     & .landmark__text {
       margin-top: 20px;
-      // padding-left: 10px;
-      // padding-right: 10px;
     }
   }
 
@@ -142,13 +136,13 @@
     padding-right: 90px;
   }
 
-  .landmark__wrap .landmark__title {
+  .landmark--city .landmark__title {
     padding-top: 7px;
     padding-left: 45px;
     padding-right: 45px;
   }
 
-  .landmark--bridge .landmark__wrap .landmark__title {
+  .landmark--bridge .landmark__title {
     padding-top: 11px;
     padding-left: 30px;
     padding-right: 30px;
