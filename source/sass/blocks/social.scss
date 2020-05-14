@@ -3,7 +3,6 @@
   justify-content: center;
   flex-wrap: wrap;
 
-  width: $wrapper-mobile-width;
   list-style: none;
   padding: 0;
 }
@@ -37,5 +36,11 @@
 
   & svg {
     fill: $primary-text-color;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .social__list {
+    margin-left: 6px;
   }
 }

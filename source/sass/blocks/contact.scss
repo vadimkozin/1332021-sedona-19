@@ -1,18 +1,20 @@
 .contact {
+  margin-bottom: 4px;
+}
+
+.contact__block {
   display: flex;
   flex-direction: column;
-
-  margin-bottom: 4px;
 }
 
 .contact__item {
   display: flex;
   flex-direction: column;
 
-  margin-bottom: 0;
+  margin-bottom: 11px;
 
-  &:last-of-type .contact__label {
-    margin-top: 10px;
+  &:last-of-type {
+    margin-bottom: 0;
   }
 }
 
@@ -41,7 +43,7 @@
   @include set-font($fz:18px, $lh:26px);
 
   background-color: $white-snow-color;
-  border: none;
+  border: solid 4px $white-snow-color;
 
   &::placeholder {
     color: $placeholder-color;
@@ -49,11 +51,12 @@
 
   &:hover {
     background-color: #e5e5e5;
+    border: solid 4px #e5e5e5;
   }
 
   &:focus {
-    border: solid 4px #e5e5e5;
     background-color: #ffffff;
+    border: solid 4px #e5e5e5;
   }
 }
 
@@ -72,19 +75,16 @@
 
 .contact__icon {
   position: absolute;
-  display: block;
   top: 50%;
   left: 50%;
+
   transform: translate(-50%, -50%);
 }
 
 @media (min-width: $tablet-width) {
-  .contact__item:first-of-type .contact__label {
-    padding-top: 3px;
-  }
-
-  .contact__item:last-of-type .contact__label {
-    padding-top: 11px;
+  .contact__item {
+    margin-top: 3px;
+    margin-bottom: 19px;
   }
 }
 
@@ -95,38 +95,33 @@
   }
 
   .contact__block {
-    display: flex;
     justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
 
     width: 960px;
   }
 
-  .contact__item:first-of-type .contact__label {
-    padding-top: 9px;
-  }
-
-  .contact__item:last-of-type .contact__label {
-    padding-top: 0;
-  }
-
   .contact__item {
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: space-between;
     align-items: center;
 
-    width: 400px;
+    width: 480px;
+    margin-top: 0;
     margin-bottom: 0;
 
-    &:last-of-type {
-      width: 479px;
+    &:nth-of-type(odd) {
+      width: 400px;
     }
   }
 
-  .contact__label {
-    flex-grow: 1;
+  .contact__item:nth-of-type(n+3) {
+    margin-top: 16px;
+  }
 
-    padding-left: 0;
-    padding-right: 0;
+  .contact__label {
+    padding: 0;
   }
 
   .contact__wrap {
@@ -136,9 +131,5 @@
 
   .contact__label2 {
     display: none;
-  }
-
-  .contact__input {
-    width: 316px;
   }
 }

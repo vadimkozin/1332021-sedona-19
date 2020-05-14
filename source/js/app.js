@@ -32,7 +32,7 @@ function init() {
     }
 
     // https://developer.mozilla.org/en-US/docs/Web/CSS/Media_Queries/Testing_media_queries
-    var mediaQueryList = window.matchMedia("(min-width: 768px)");
+    var mediaQueryList = window.matchMedia('(min-width: 768px)');
     mediaQueryList.addListener(handleBreakpointChange);
     handleBreakpointChange(mediaQueryList);
 
@@ -50,14 +50,14 @@ function init() {
       var index = 0;
 
       if (evt.matches) {  // >= 768px
-        setOrder("reset");
+        setOrder('reset');
       } else {            // < 768px
-        setOrder("next")
+        setOrder('next')
       }
 
       // возвращает индекс
       function getIndex(mode) {
-        return (mode === "next") ? index+=1 : 0;
+        return (mode === 'next') ? index+=1 : 0;
       }
 
       // устанавливает порядок перехода по элементам
@@ -104,4 +104,4 @@ function init() {
   }
 }
 
-window.addEventListener("load", init, false);
+window.addEventListener('load', init, false);

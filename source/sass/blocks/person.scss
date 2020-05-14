@@ -27,7 +27,7 @@
     @include set-font($fz:18px, $lh:26px);
 
     background-color: $white-snow-color;
-    border: none;
+    border: solid 4px $white-snow-color;
 
     &::placeholder {
       color: #000000;
@@ -35,11 +35,12 @@
 
     &:hover {
       background-color: #e5e5e5;
+      border: solid 4px #e5e5e5;
     }
 
     &:focus {
-      border: solid 4px #e5e5e5;
       background-color: #ffffff;
+      border: solid 4px #e5e5e5;
     }
   }
 

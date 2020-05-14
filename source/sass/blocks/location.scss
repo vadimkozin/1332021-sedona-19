@@ -67,6 +67,8 @@
 @media (min-width: $tablet-width) {
   .location {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 
     min-height: 256px;
     padding-left: 0;
@@ -74,6 +76,7 @@
 
   .location__item {
     width: calc(100% / 3);
+    min-height: 256px;
     padding-top: 44px;
 
     &::after {

@@ -6,13 +6,16 @@
   width: 100%;
   height: 160px;
   margin-top: -5px;
-  padding-left: 21px;
-  padding-top: 15px;
-  padding-right: 33px;
+  padding-left: 20px;
+  padding-top: 12px;
+  padding-right: 20px;
   resize: none;
 
   @include set-font($fz:18px, $lh:26px);
   text-transform: none;
+
+  background-color: $elem-outer-fresh-color;
+  border: solid 4px $elem-outer-fresh-color;
 
   &::placeholder {
     color: $secondary-text-color;
@@ -20,15 +23,13 @@
 
   &:hover {
     background-color: #e5e5e5;
+    border: solid 4px #e5e5e5;
   }
 
   &:focus {
     border: solid 4px #e5e5e5;
     background-color: #ffffff;
   }
-
-  background-color: $elem-outer-fresh-color;
-  border: none;
 }
 
 @media (min-width: $tablet-width) {
